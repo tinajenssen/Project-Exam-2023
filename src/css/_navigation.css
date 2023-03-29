@@ -1,0 +1,43 @@
+.navbar {
+  width: 100%;
+  border: 1px solid grey;
+}
+/*
+.nav-profile {
+  width: 30%;
+  background-color: greenyellow;
+}
+.navbar-brand {
+  width: 40%;
+  background-color: pink;
+}
+.navbar-brand img {
+  width: 5%;
+  margin-left: 47.5%;
+}
+
+#responsive-navbar-nav {
+  width: 30%;
+  background-color: hotpink;
+}
+*/
+.profile-img {
+  width: 40px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
+.navbar-brand img {
+  width: 40px;
+}
+.navbar-toggler {
+  background-color: darkgoldenrod;
+  width: 50px;
+}
+
+/*
+
+.navbar-toggler.collapsed {
+  background-color: blue;
+  width: 30%;
+}
+*/

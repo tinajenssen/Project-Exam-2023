@@ -1,0 +1,128 @@
+import React from "react";
+
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Nav from "react-bootstrap/Nav";
+
+const schema = yup.object().shape({
+  name: yup
+    .string()
+    .required("Please enter your name")
+    .matches(/^[\w]+$/, "skriv feilmelding her")
+    .max(20, "use a shorter name"),
+  email: yup
+    .string()
+    .required("Please enter an email address")
+    .matches(/^[\w\-.]+@(stud\.)?noroff\.no$/, "feilmelding: må være noroff")
+    .email("Please enter a valid email address"),
+  password: yup
+    .string()
+    .required("Please enter your password")
+    .min(8, "The password must contain at least 8 characters"),
+});
+
+function RegisterForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  function onSubmit(data) {
+    console.log(data);
+  }
+
+  console.log(errors);
+
+  return (
+    <>
+      <div className="register-form">
+        <h1>Create an account</h1>
+        <h2>Join Noroff network by creating an account</h2>
+        <Form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-4"
+          id="register"
+          method="get"
+          action="/feed/"
+        >
+          <Form.Group className="form-input mb-2">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              {...register("name")}
+              type="text"
+              name="name"
+              placeholder="Name"
+            ></Form.Control>
+            <Form.Text>
+              {errors.name && <span>{errors.name.message}</span>}
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="form-input mb-2">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              {...register("email")}
+              type="email"
+              name="email"
+              placeholder="Email"
+            ></Form.Control>
+            <Form.Text>
+              {errors.email && <span>{errors.email.message}</span>}
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="form-input mb-2">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              {...register("password")}
+              type="password"
+              name="password"
+              placeholder="Password"
+            ></Form.Control>
+            <Form.Text>
+              {errors.password && <span>{errors.password.message}</span>}
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="form-input mb-2">
+            <Form.Label>Banner</Form.Label>
+            <Form.Control
+              {...register("banner")}
+              type="url"
+              name="banner"
+            ></Form.Control>
+          </Form.Group>
+
+          <Form.Group className="form-input mb-2">
+            <Form.Label>Avatar</Form.Label>
+            <Form.Control
+              {...register("avatar")}
+              type="url"
+              name="avatar"
+            ></Form.Control>
+          </Form.Group>
+
+          <Form.Group className="form-input mt-4">
+            <Button type="submit">Register</Button>
+            <Form.Text className="undertext">Already registred?</Form.Text>
+            <Form.Text className="undertext">
+              <Nav.Link href="/login" className="text-link">
+                {" "}
+                Login here
+              </Nav.Link>
+            </Form.Text>
+          </Form.Group>
+        </Form>
+      </div>
+    </>
+  );
+}
+
+export default RegisterForm;
