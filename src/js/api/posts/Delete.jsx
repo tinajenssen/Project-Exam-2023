@@ -1,3 +1,5 @@
+// delete post
+
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
 

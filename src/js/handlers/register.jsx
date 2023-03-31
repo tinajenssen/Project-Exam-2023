@@ -12,3 +12,5 @@ export function setRegisterFormListener() {
     register(profile);
   });
 }
+
+//

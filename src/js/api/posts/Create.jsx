@@ -1,3 +1,5 @@
+// Create post
+
 import { API_SOCIAL_URL } from "../constants";
 import { fetchToken } from "../fetchToken";
 
