@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+// import { register } from "../../js/api/auth/register.jsx";
+
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
@@ -11,17 +13,23 @@ import Nav from "react-bootstrap/Nav";
 const schema = yup.object().shape({
   name: yup
     .string()
-    .required("Please enter your name")
-    .matches(/^[\w]+$/, "skriv feilmelding her")
-    .max(20, "use a shorter name"),
+    .required("This field is required. Please enter a user name")
+    .matches(
+      /^[\w]+$/,
+      "User name must contain only letters, numbers and underscore (_) when creating a new user."
+    )
+    .max(20, "This user name is too long. Please choose a shorter username"),
   email: yup
     .string()
-    .required("Please enter an email address")
-    .matches(/^[\w\-.]+@(stud\.)?noroff\.no$/, "feilmelding: må være noroff")
+    .required("This field is required. Please enter your email address")
+    .matches(
+      /^[\w\-.]+@(stud\.)?noroff\.no$/,
+      "Only @(stud.)noroff.no domains can register"
+    )
     .email("Please enter a valid email address"),
   password: yup
     .string()
-    .required("Please enter your password")
+    .required("This field is required. Please enter a password")
     .min(8, "The password must contain at least 8 characters"),
 });
 
@@ -44,13 +52,14 @@ function RegisterForm() {
     <>
       <div className="register-form">
         <h1>Create an account</h1>
-        <h2>Join Noroff network by creating an account</h2>
+        <h2>Join our inspiring network!</h2>
         <Form
           onSubmit={handleSubmit(onSubmit)}
           className="mt-4"
-          id="register"
-          method="get"
-          action="/feed/"
+          id="registerForm"
+          /*
+          method="post"
+          action="/auth/register"*/
         >
           <Form.Group className="form-input mb-2">
             <Form.Label>Name</Form.Label>

@@ -2,8 +2,15 @@
 
 :root {
   /* Primary button */
-  --primary-colour: #f99746;
-  --secondary-colour: #8c9df4;
+  --primary-color: #f99746;
+  --primary-color-darker: #ed7d2b;
+  --secondary-color: #8c9df4;
+  --secondary-color-lighter: #ebf3fa;
+  --nav-link-color: #000;
+  --border-color: #e2e2e2;
+  --primary-color-hover: #ed7d2b;
+  --dark: #000;
+  --grey: #959493;
 
   /*
   --bs-background-colour: #f99746;

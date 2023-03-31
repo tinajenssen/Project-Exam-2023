@@ -2,6 +2,11 @@
   width: 100%;
   border: 1px solid grey;
 }
+
+.nav-link {
+  font-size: 16px;
+  color: var(--nav-link-color) !important;
+}
 /*
 .nav-profile {
   width: 30%;

@@ -1,7 +1,7 @@
 .col-left {
-  background-color: #ebf3fa;
   height: 100vh;
   padding: 0 !important;
+  background-color: var(--secondary-color-lighter);
 }
 .col-left img {
   width: 48%;
@@ -28,7 +28,7 @@
 .form-label {
   margin-bottom: 0;
   font-size: 10px;
-  color: black;
+  color: var(--dark);
 }
 .form-control {
   font-size: 12px;
@@ -39,8 +39,8 @@
 }
 
 button.btn.btn-primary {
-  background-color: var(--primary-colour) !important;
-  border: var(--primary-colour);
+  background-color: var(--primary-color) !important;
+  border: var(--primary-color);
   color: black;
   font-size: 14px;
   border-radius: 1rem;
@@ -49,27 +49,30 @@ button.btn.btn-primary {
 }
 
 button.btn.btn-primary:hover {
-  background-color: #ed7d2b !important;
+  background-color: var(--primary-color-hover) !important;
 }
 
 .form-input {
   margin: auto;
 }
 .form-control {
-  border-color: #e2e2e2;
+  border-color: var(--border-color);
 }
 
 .undertext {
   display: inline-flex;
+  font-size: 14px;
+  color: var(--grey);
 }
 .text-link {
+  font-size: 14px;
   margin-left: 5px;
   font-weight: 800;
-  color: black;
+  color: var(--dark);
 }
 
 .text-link:hover {
-  color: grey;
+  color: var(--grey) !important;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
