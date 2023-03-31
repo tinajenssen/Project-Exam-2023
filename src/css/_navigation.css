@@ -7,25 +7,7 @@
   font-size: 16px;
   color: var(--nav-link-color) !important;
 }
-/*
-.nav-profile {
-  width: 30%;
-  background-color: greenyellow;
-}
-.navbar-brand {
-  width: 40%;
-  background-color: pink;
-}
-.navbar-brand img {
-  width: 5%;
-  margin-left: 47.5%;
-}
 
-#responsive-navbar-nav {
-  width: 30%;
-  background-color: hotpink;
-}
-*/
 .profile-img {
   width: 40px;
   border: 1px solid #eee;
@@ -38,11 +20,3 @@
   background-color: darkgoldenrod;
   width: 50px;
 }
-
-/*
-
-.navbar-toggler.collapsed {
-  background-color: blue;
-  width: 30%;
-}
-*/

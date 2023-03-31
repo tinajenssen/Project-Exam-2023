@@ -13,3 +13,7 @@ h2 {
   color: var(--grey);
   font-size: 16px;
 }
+
+h3 {
+  font-size: 14px;
+}
