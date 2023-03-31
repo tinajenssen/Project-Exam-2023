@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-// import { register } from "../../js/api/auth/register.jsx";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";

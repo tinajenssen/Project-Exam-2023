@@ -10,10 +10,7 @@ import Nav from "react-bootstrap/Nav";
 
 const schema = yup.object().shape({
   email: yup.string().required("Please enter an email address"),
-  // .matches(/^[\w\-.]+@(stud\.)?noroff\.no$/, "feilmelding: må være noroff")
-  // .email("Please enter a valid email address"),
   password: yup.string().required("Please enter your password"),
-  // .min(8, "The password must contain at least 8 characters"),
 });
 
 function LoginForm() {
