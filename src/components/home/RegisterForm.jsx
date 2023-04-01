@@ -21,8 +21,8 @@ const schema = yup.object().shape({
     .string()
     .required("This field is required. Please enter your email address")
     .matches(
-      /^[\w\-.]+@(stud\.)?noroff\.no$/,
-      "Only @(stud.)noroff.no domains can register"
+      /^[\w\-.]+@stud.noroff\.no$/,
+      "Only @stud.noroff.no domains can register"
     )
     .email("Please enter a valid email address"),
   password: yup
