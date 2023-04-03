@@ -1,15 +1,14 @@
 import { API_SOCIAL_URL } from "../constants.jsx";
-
 import * as storage from "../../storage/index.jsx";
 
 const action = "/auth/login";
 const method = "post";
 
-export async function login(profile) {
+export async function login(profile, onSuccess) {
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);
 
-  const response = fetch(loginURL, {
+  const response = await fetch(loginURL, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -17,10 +16,21 @@ export async function login(profile) {
     body,
   });
 
-  const { accessToken, ...user } = await response.json();
-  storage.save("token", accessToken);
-  storage.save("profile", user);
+  const result = await response.json();
 
-  // basic UX
-  alert("you are now logged in");
+  if (response.ok) {
+    // hvis login var vellykket, lagre token i localstorage
+    // og kall onSuccess callback
+    const { accessToken, ...user } = result;
+    storage.save("token", accessToken);
+    storage.save("profile", user);
+
+    // basic UX
+    alert("you are now logged in");
+    onSuccess();
+  } else {
+    // Hvis login feilet, gi beskjed til brukeren
+    alert("Login failed. Please try again");
+    console.error(result);
+  }
 }

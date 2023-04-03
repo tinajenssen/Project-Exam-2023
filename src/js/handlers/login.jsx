@@ -1,6 +1,6 @@
 import { login } from "../api/auth/login.jsx";
 
-export function setLoginFormListener() {
+export function setLoginFormListener(onSuccess) {
   const form = document.querySelector("#loginForm");
 
   form.addEventListener("submit", (event) => {
@@ -9,7 +9,7 @@ export function setLoginFormListener() {
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
 
-    login(profile);
+    login(profile, onSuccess);
   });
 }
 

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -7,6 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
+import { setLoginFormListener } from "../../js/handlers/login";
 
 const schema = yup.object().shape({
   email: yup.string().required("Please enter an email address"),
@@ -21,6 +24,29 @@ function LoginForm() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+
+  // nye variabler for å håndtere navigering
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // useEffect brukes for å sette opp en lytter som lytter etter events
+
+  // Lytter etter at brukeren prøver å logge inn
+  useEffect(() => {
+    // sender inn en funksjon som skal kjøres når brukeren har blitt logget inn
+    setLoginFormListener(() => {
+      setIsLoggedIn(true);
+    });
+  }, []);
+
+  // Lytter etter at brukeren har blitt logget inn
+  useEffect(() => {
+    if (isLoggedIn) {
+      // hvis brukeren har blitt logget inn, naviger til feed
+      navigate("/feed");
+      setIsLoggedIn(false);
+    }
+  }, [isLoggedIn, navigate]);
 
   function onSubmit(data) {
     console.log(data);
