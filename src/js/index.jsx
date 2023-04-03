@@ -1,3 +1,4 @@
+/*
 import { setRegisterFormListener } from "../handlers/register";
 import { setLoginFormListener } from "./handlers/login";
 
@@ -6,3 +7,4 @@ if (path === "/") {
 } else if (path === "/login") {
   setLoginFormListener();
 }
+*/
