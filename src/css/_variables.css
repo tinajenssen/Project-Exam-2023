@@ -10,7 +10,8 @@
   --border-color: #e2e2e2;
   --primary-color-hover: #ed7d2b;
   --dark: #000;
-  --grey: #959493;
+  --grey: #555353;
+  --error: #b30000;
 }
 
 /* Knapp : #F99746 */
