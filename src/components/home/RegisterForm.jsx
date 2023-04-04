@@ -81,9 +81,6 @@ function RegisterForm() {
           onSubmit={handleSubmit(onSubmit)}
           className="mt-4"
           id="registerForm"
-          /*
-          method="post"
-          action="/auth/register"*/
         >
           <Form.Group className="form-input mb-2">
             <Form.Label>Name</Form.Label>
@@ -94,7 +91,7 @@ function RegisterForm() {
               placeholder="Name"
             ></Form.Control>
             <Form.Text>
-              {errors.name && <span>{errors.name.message}</span>}
+              {errors.name && <div>{errors.name.message}</div>}
             </Form.Text>
           </Form.Group>
 
@@ -107,7 +104,7 @@ function RegisterForm() {
               placeholder="Email"
             ></Form.Control>
             <Form.Text>
-              {errors.email && <span>{errors.email.message}</span>}
+              {errors.email && <div>{errors.email.message}</div>}
             </Form.Text>
           </Form.Group>
 
@@ -120,7 +117,7 @@ function RegisterForm() {
               placeholder="Password"
             ></Form.Control>
             <Form.Text>
-              {errors.password && <span>{errors.password.message}</span>}
+              {errors.password && <div>{errors.password.message}</div>}
             </Form.Text>
           </Form.Group>
 

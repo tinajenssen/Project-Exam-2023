@@ -43,7 +43,7 @@ function LoginForm() {
   useEffect(() => {
     if (isLoggedIn) {
       // hvis brukeren har blitt logget inn, naviger til feed
-      navigate("/feed");
+      navigate("/profile");
       setIsLoggedIn(false);
     }
   }, [isLoggedIn, navigate]);
@@ -68,7 +68,7 @@ function LoginForm() {
               placeholder="Email"
             ></Form.Control>
             <Form.Text>
-              {errors.email && <span>{errors.email.message}</span>}
+              {errors.email && <div>{errors.email.message}</div>}
             </Form.Text>
           </Form.Group>
 
@@ -81,7 +81,7 @@ function LoginForm() {
               placeholder="Password"
             ></Form.Control>
             <Form.Text>
-              {errors.password && <span>{errors.password.message}</span>}
+              {errors.password && <div>{errors.password.message}</div>}
             </Form.Text>
           </Form.Group>
 
@@ -89,7 +89,7 @@ function LoginForm() {
             <Button type="submit">Login</Button>
             <Form.Text className="undertext">Not registred?</Form.Text>
             <Form.Text className="undertext">
-              <Nav.Link href="/" className="text-link">
+              <Nav.Link href="/register" className="text-link">
                 {" "}
                 Register here
               </Nav.Link>

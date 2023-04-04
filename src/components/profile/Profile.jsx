@@ -1,10 +1,12 @@
 import React from "react";
 
-function Profile() {
+import Navigation from "../layout/Navigation";
+
+export default function Profile() {
   return (
     <>
-      <h1>Profile</h1>
+      <Navigation />
+      <h1>profile</h1>
     </>
   );
 }
-export default Profile();

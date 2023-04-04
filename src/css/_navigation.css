@@ -7,14 +7,16 @@
   font-size: 16px;
   color: var(--nav-link-color) !important;
 }
-
+.logo img {
+  width: 100px;
+}
 .profile-img {
   width: 40px;
   border: 1px solid #eee;
   border-radius: 50%;
 }
 .navbar-brand img {
-  width: 40px;
+  width: 130px;
 }
 .navbar-toggler {
   background-color: darkgoldenrod;
