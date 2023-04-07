@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
 import PostItem from "./PostItem.jsx";
-import Loading from "../../components/common/loading.jsx";
+
+import Loading from "../../../components/common/Loading.jsx";
 
 const action = "/posts";
 const url = API_SOCIAL_URL + action;
