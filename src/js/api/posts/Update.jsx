@@ -1,5 +1,5 @@
 // update post
-
+/*
 import { API_SOCIAL_URL } from "../constants";
 import { fetchToken } from "../fetchToken";
 
@@ -17,3 +17,4 @@ export async function updatePost(postData) {
   //return the post
   return await response.json();
 }
+*/

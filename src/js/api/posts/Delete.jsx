@@ -1,5 +1,7 @@
 // delete post
 
+/*
+
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
 
@@ -16,3 +18,4 @@ export async function removePost(id) {
   //return the post
   return await response.json();
 }
+*/
