@@ -10,9 +10,9 @@ function Home() {
         <div className="box">
           <img src={logo} alt="" className="secondary-logo" />
           <h1 className=" text-center">Welcome to Noroff Network</h1>
-          <h2 className="text-center">
+          <h3 className="text-center">
             An inspiring network for Noroff students{" "}
-          </h2>
+          </h3>
           <Nav.Link className="primary-button" href="/login">
             Login
           </Nav.Link>

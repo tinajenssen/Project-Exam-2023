@@ -76,7 +76,7 @@ function RegisterForm() {
     <>
       <div className="register-form">
         <h1>Create an account</h1>
-        <h2>Join our inspiring network!</h2>
+        <h3>Join our inspiring network!</h3>
         <Form
           onSubmit={handleSubmit(onSubmit)}
           className="mt-4"

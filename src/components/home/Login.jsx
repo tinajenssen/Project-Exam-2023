@@ -13,7 +13,7 @@ function Login() {
           <Col md="8" className="col-left">
             <img src={illustration} alt="" />
           </Col>
-          <Col med="4" className="col-right">
+          <Col md="4" className="col-right">
             <LoginForm />
           </Col>
         </Row>
