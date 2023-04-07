@@ -1,10 +1,13 @@
-// list of post thumbnails
+import React from "react";
 
-function Posts() {
+import Container from "react-bootstrap/Container";
+
+function ListOfPosts() {
   return (
-    <>
-      <h1>Posts</h1>
-    </>
+    <Container>
+      <div></div>
+    </Container>
   );
 }
-export default Posts;
+
+export default ListOfPosts;
