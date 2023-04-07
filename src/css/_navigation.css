@@ -1,23 +1,27 @@
 .navbar {
   width: 100%;
-  border: 1px solid grey;
+  height: 12vh;
+}
+
+.navbar-brand img {
+  width: 130px;
 }
 
 .nav-link {
   font-size: 16px;
   color: var(--nav-link-color) !important;
 }
-.logo img {
-  width: 100px;
+
+.nav-link:hover {
+  font-weight: 600;
 }
-.profile-img {
-  width: 40px;
-  border: 1px solid #eee;
-  border-radius: 50%;
+
+/* Denne virker ikke. må sjekke */
+.nav-link.active {
+  font-weight: 600;
 }
-.navbar-brand img {
-  width: 130px;
-}
+
+/* Denne må redigeres */
 .navbar-toggler {
   background-color: darkgoldenrod;
   width: 50px;

@@ -1,0 +1,79 @@
+.page-container {
+  height: 81vh;
+  background-color: var(--light-grey);
+}
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+/*
+.banner {
+  background-color: aliceblue;
+}
+
+.user-profile {
+  background-color: aquamarine;
+}
+
+.feed {
+  background-color: blueviolet;
+}
+
+.follow {
+  background-color: azure;
+}
+
+*/
+/*
+.nav-pills .nav-link {
+  border: 1px solid var(--primary-color);
+  border-radius: 0;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+.nav-pills .nav-link:hover {
+  background-color: var(--primary-color) !important;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--primary-color) !important;
+  font-weight: 600;
+}
+*/
+img.profile-avatar {
+  width: 70%;
+  border-radius: 50%;
+  margin-left: 15%;
+}
+
+.secondary-btn {
+  border: 0.5px solid var(--border-color) !important;
+  border-radius: 3px !important;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+.secondary-btn.active {
+  background-color: var(--secondary-color) !important;
+  font-weight: 800;
+}
+.secondary-btn:hover {
+  background-color: var(--secondary-color-lighter) !important;
+  font-weight: 800;
+}
+
+/* FEED */
+.tab-content {
+  display: flex;
+  flex-direction: row;
+  height: 66vh;
+}
+.tab-pane {
+  flex: 1;
+  overflow-y: scroll;
+}
+.post-card {
+  margin-bottom: 15px;
+}

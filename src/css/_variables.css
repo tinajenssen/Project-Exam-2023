@@ -1,17 +1,16 @@
 /* Colors */
 
 :root {
-  /* Primary button */
   --primary-color: #f99746;
-  --primary-color-darker: #ed7d2b;
-  --secondary-color: #8c9df4;
+  --primary-color-darker: #ed6f07;
+  --secondary-color: #5a6ce1;
   --secondary-color-lighter: #ebf3fa;
-  --nav-link-color: #000;
+  --nav-link-color: #212529;
   --border-color: #e2e2e2;
-  --primary-color-hover: #ed7d2b;
-  --dark: #000;
+  --primary-color-hover: #ed6f07;
+  --dark: #212529;
   --grey: #555353;
+  --light: #f8f8f8;
+  --light-grey: #f8f8f8;
   --error: #b30000;
 }
-
-/* Knapp : #F99746 */

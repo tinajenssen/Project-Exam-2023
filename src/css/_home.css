@@ -27,35 +27,3 @@
   padding-top: 60px;
   padding-bottom: 50px;
 }
-.primary-button {
-  background-color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color);
-  color: black;
-  font-size: 14px;
-  border-radius: 1rem;
-  margin: auto;
-  margin-bottom: 10px;
-  width: 200px;
-  padding: 5px;
-  text-align: center;
-  margin-top: 50px;
-}
-.primary-button:hover {
-  background-color: var(--primary-color-hover) !important;
-}
-
-.secondary-button {
-  border: 1px solid var(--primary-color);
-  color: black;
-  font-size: 14px;
-  border-radius: 1rem;
-  margin: auto;
-  margin-bottom: 10px;
-  width: 200px;
-  padding: 5px;
-  text-align: center;
-}
-
-.secondary-button:hover {
-  background-color: var(--primary-color-hover) !important;
-}
