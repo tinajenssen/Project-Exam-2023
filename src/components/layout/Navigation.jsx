@@ -3,15 +3,17 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+
 // import Profile from "../../img/profile_.png";
 import Logo from "../../img/primary_logo.png";
 
 function Navigation() {
   return (
     <Navbar collapseOnSelect expand="md">
-      <Container>
+      <Container fluid className="nav-container ps-0 pe-0 mx-5">
         <Navbar.Collapse className="nav-profile w-100 order-1 order-md-0">
           <Nav className="nav-links me-auto">
+            <Nav.Link href="/feed">Feed</Nav.Link>
             <Nav.Link href="/profile">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
