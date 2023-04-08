@@ -86,7 +86,9 @@ function LoginForm() {
           </Form.Group>
 
           <Form.Group className="form-input mt-4">
-            <Button type="submit">Login</Button>
+            <Button className="primary-btn" type="submit">
+              Login
+            </Button>
             <Form.Text className="undertext">Not registred?</Form.Text>
             <Form.Text className="undertext">
               <Nav.Link href="/register" className="text-link">

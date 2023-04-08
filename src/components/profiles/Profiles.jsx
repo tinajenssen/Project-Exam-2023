@@ -7,20 +7,21 @@ import Breadcrumb from "react-bootstrap/breadcrumb";
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
 // import ProfileTabs from "./Tabs";
-import GetPosts from "../../js/api/posts/Read";
+import GetProfiles from "../../js/api/profiles/Profiles";
 
-export default function Feed() {
+export default function People() {
   return (
     <>
       <Navigation />
       <Container fluid className="page-container">
         <Breadcrumb className="breadcrumb pt-4 pb-2">
-          <Breadcrumb.Item active>Posts</Breadcrumb.Item>
+          <Breadcrumb.Item active>People</Breadcrumb.Item>
         </Breadcrumb>
-        <h1 className="text-center pb-2">Recent posts</h1>
+        <h1 className="text-center pb-2">Find people</h1>
+
         <Row>
-          <Col sm={10} md={8} lg={7} className="posts-container">
-            <GetPosts />
+          <Col sm={10} md={8} lg={7} className="profiles-container">
+            <GetProfiles />
           </Col>
         </Row>
       </Container>

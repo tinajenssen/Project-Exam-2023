@@ -140,7 +140,9 @@ function RegisterForm() {
           </Form.Group>
 
           <Form.Group className="form-input mt-4">
-            <Button type="submit">Register</Button>
+            <Button className="primary-btn" type="submit">
+              Register
+            </Button>
             <Form.Text className="undertext">Already registred?</Form.Text>
             <Form.Text className="undertext">
               <Nav.Link href="/login" className="text-link">

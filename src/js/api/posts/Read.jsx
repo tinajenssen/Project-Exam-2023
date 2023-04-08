@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
+//import { Link } from "react-router-dom";
+//import { Row } from "react-bootstrap";
+//import { Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
-import PostItem from "./PostItem.jsx";
+// import Profile from "../../../img/profile_.png";
+// import PostItem from "./PostItem.jsx";
 
 import Loading from "../../../components/common/Loading.jsx";
 
@@ -26,6 +32,8 @@ function GetPosts() {
         const response = await fetchToken(url);
         const json = await response.json();
         setPosts(json);
+        console.log(json);
+
         // clear loading when data is successfylly loaded
         setIsLoading(false);
       } catch (error) {
@@ -45,16 +53,86 @@ function GetPosts() {
   }
 
   return (
-    <div className="post-card">
-      {posts.map(function (post) {
-        const { id, title, body } = post;
-        return <PostItem key={id} title={title} body={body} />;
-      })}
-    </div>
+    <>
+      <Container className="all-posts px-4">
+        {posts.map((post) => (
+          <Link to={`post/${post.id}`} className="post-link">
+            <div
+              className="d-flex posts"
+              id={post.id}
+              data-target={post.id}
+              key={post.id}
+            >
+              <div>
+                <h2>{post.title}</h2>
+
+                <p className="date">Posted on {post.created}</p>
+                <p>{post.body}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </Container>
+    </>
   );
 }
 
 export default GetPosts;
+
+/* bilde
+            <img src={post.media} style={{ width: "100%", height: "100%" }} />
+            */
+/*
+
+   <Row className="posts" id={post.id} data-target={post.id} key={post.id}>
+          <Col>
+            <Link>Link: {post.author_name}</Link>
+          </Col>
+          <Col>
+            <h3>{post.title}</h3>
+            <p>{post.author}</p>
+            <p>{post.body}</p>
+            <p>{post.created}</p>
+          </Col>
+          <Col>
+            <small className="post-id">id {post.id}</small>
+          </Col>
+        </Row>
+
+        
+        <div className="posts" id={post.id} data-target={post.id} key={post.id}>
+          <div className="postContainer">
+            <div className="row">
+              <div className="col">
+                <Link>{post.author_name}</Link>
+              </div>
+     
+            </div>
+            <div className="row postBody">
+              <div className="col-9">
+                <h3>{post.title}</h3>
+                <p>{post.author}</p>
+                <p>{post.body}</p>
+                <p>{post.created}</p>
+              </div>
+              <div className="col-3">
+                <small className="post-id">id {post.id}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        */
+/*
+    <div className="post-card">
+      {posts.map(function (post) {
+        const { id, title, body, author } = post;
+        return (
+          <PostItem key={id} title={title} body={body} author={author.name} />
+        );
+      })}
+    </div>
+    */
 
 /* Denne virket
  return (

@@ -4,6 +4,8 @@ import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import GetPosts from "../../js/api/posts/Read";
+import GetProfiles from "../../js/api/profiles/Profiles";
+import Media from "./MediaObject";
 
 function ProfileTabs() {
   return (
@@ -12,7 +14,10 @@ function ProfileTabs() {
         <Col sm={2}>
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="first" className="py-1 mb-2 secondary-btn">
+              <Nav.Link
+                eventKey="first"
+                className="py-1 mb-2 secondary-btn text-end"
+              >
                 Posts
               </Nav.Link>
             </Nav.Item>
@@ -31,17 +36,18 @@ function ProfileTabs() {
         <Col sm={10}>
           <Tab.Content>
             <Tab.Pane eventKey="first">
-              <h2>Posts</h2>
-              This is where all the posts will show
+              <h1>Posts</h1>
               <GetPosts />
             </Tab.Pane>
             <Tab.Pane eventKey="second">
               <h2>Profiles</h2>
               This is where you can se all profiles
+              <GetProfiles />
             </Tab.Pane>
             <Tab.Pane eventKey="third">
               <h2>Search</h2>
               This is where you can search
+              <Media />
             </Tab.Pane>
           </Tab.Content>
         </Col>

@@ -13,10 +13,10 @@ function Home() {
           <h3 className="text-center">
             An inspiring network for Noroff students{" "}
           </h3>
-          <Nav.Link className="primary-button" href="/login">
+          <Nav.Link className="primary-btn" href="/login">
             Login
           </Nav.Link>
-          <Nav.Link className="secondary-button" href="/register">
+          <Nav.Link className="primary-btn-outline" href="/register">
             Register
           </Nav.Link>
         </div>
