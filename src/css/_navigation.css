@@ -1,28 +1,42 @@
 .navbar {
   width: 100%;
   height: 12vh;
+  box-shadow: 1px 4px 6px var(--border-color);
+  background-color: var(--light-blue);
 }
 
 .navbar-brand img {
   width: 130px;
 }
 
-.nav-link {
+.navbar a {
   font-size: 16px;
   color: var(--nav-link-color) !important;
+  text-decoration: none;
+  padding: 10px;
+}
+.navbar a.active {
+  color: var(--primary-color) !important;
 }
 
-.nav-link:hover {
-  font-weight: 600;
-}
-
-/* Denne virker ikke. må sjekke */
-.nav-link.active {
-  font-weight: 600;
+.navbar a:hover {
+  color: var(--primary-color) !important;
 }
 
 /* Denne må redigeres */
 .navbar-toggler {
   background-color: darkgoldenrod;
   width: 50px;
+}
+
+/*breadcrumb */
+.breadcrumb {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  margin: auto;
+  color: var(--primary-color) !important;
+}
+.breadcrumb-item.active {
+  color: var(--primary-color) !important;
 }

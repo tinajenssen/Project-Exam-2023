@@ -42,20 +42,6 @@
   display: inline;
 }
 
-button.btn.btn-primary {
-  background-color: var(--primary-color) !important;
-  border: var(--primary-color);
-  color: black;
-  font-size: 14px;
-  border-radius: 1rem;
-  margin: auto;
-  margin-bottom: 10px;
-}
-
-button.btn.btn-primary:hover {
-  background-color: var(--primary-color-hover) !important;
-}
-
 .form-input {
   margin: auto;
 }

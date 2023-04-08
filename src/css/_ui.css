@@ -1,5 +1,5 @@
 /* BUTTONS */
-.primary-button {
+.primary-btn {
   background-color: var(--primary-color) !important;
   border: 1px solid var(--primary-color);
   color: black;
@@ -12,11 +12,11 @@
   text-align: center;
   margin-top: 50px;
 }
-.primary-button:hover {
+.primary-btn:hover {
   background-color: var(--primary-color-hover) !important;
 }
 
-.secondary-button {
+.primary-btn-outline {
   border: 1px solid var(--primary-color);
   color: black;
   font-size: 14px;
@@ -28,10 +28,26 @@
   text-align: center;
 }
 
-.secondary-button:hover {
+.primary-btn-outline:hover {
   background-color: var(--primary-color-hover) !important;
 }
 
+/*
+button.btn.btn-primary {
+  background-color: var(--primary-color) !important;
+  border: var(--primary-color);
+  color: black;
+  font-size: 14px;
+  border-radius: 1rem;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+button.btn.btn-primary:hover {
+  background-color: var(--primary-color-hover) !important;
+}
+
+*/
 /* outline blue btn */
 .secondary-btn {
   border: 0.5px solid var(--border-color) !important;
@@ -47,4 +63,38 @@
 .secondary-btn:hover {
   background-color: var(--secondary-color-lighter) !important;
   font-weight: 800;
+}
+
+.logout-btn {
+  border: 1px solid var(--secondary-color-lighter) !important;
+  border-radius: 2rem;
+  width: 90px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.search-btn {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: #fff;
+  font-size: 12px;
+}
+
+.search-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.follow-btn {
+  border: 1px solid var(--primary-color);
+  font-size: 12px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.follow-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }

@@ -1,7 +1,10 @@
 /* Colors */
 
 :root {
-  --primary-color: #f99746;
+  --primary-color: #2c43d8;
+  --bs-btn-border-color: #2c43d8;
+  --light-blue: #f9fafe;
+  --primary-color-light: #ebf3fa;
   --primary-color-darker: #ed6f07;
   --secondary-color: #5a6ce1;
   --secondary-color-lighter: #ebf3fa;

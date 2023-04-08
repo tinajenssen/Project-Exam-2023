@@ -1,4 +1,31 @@
 /* POSTS */
-.post {
-  background-color: var(--primary-color);
+.posts {
+  margin-bottom: 10px;
+  padding: 15px 25px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.posts:hover {
+  box-shadow: 1px 4px 6px var(--border-color);
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  margin: auto;
+}
+
+.all-posts {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.spinner {
+  color: var(--primary-color);
+  margin: auto;
+}
+
+.post-link {
+  text-decoration: none;
 }

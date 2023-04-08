@@ -1,12 +1,49 @@
-.page-container {
-  height: 81vh;
-  background-color: var(--light-grey);
+.profiles-container {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  margin: auto;
 }
-.card {
-  border: 1px solid var(--border-color);
+
+.all-profiles {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.searchField {
+  margin-bottom: 10px;
+}
+
+.profiles {
+  margin-bottom: 10px;
+  padding: 15px 25px;
+  background-color: #fff;
   border-radius: 5px;
 }
 
+.profile-name {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.profile-name a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.profile-name a:hover {
+  text-decoration: underline;
+}
+
+/*
+.profiles:hover {
+  box-shadow: 1px 4px 6px var(--border-color);
+}
+*/
+
+.profile-avatar {
+  margin-left: 0 !important;
+}
 /*
 .banner {
   background-color: aliceblue;
@@ -42,12 +79,14 @@
   font-weight: 600;
 }
 */
+/*
 img.profile-avatar {
   width: 70%;
   border-radius: 50%;
   margin-left: 15%;
 }
-
+*/
+/*
 .secondary-btn {
   border: 0.5px solid var(--border-color) !important;
   border-radius: 3px !important;
@@ -63,8 +102,9 @@ img.profile-avatar {
   background-color: var(--secondary-color-lighter) !important;
   font-weight: 800;
 }
-
+*/
 /* FEED */
+/*
 .tab-content {
   display: flex;
   flex-direction: row;
@@ -73,7 +113,10 @@ img.profile-avatar {
 .tab-pane {
   flex: 1;
   overflow-y: scroll;
+  margin-left: 50px;
 }
 .post-card {
   margin-bottom: 15px;
 }
+*/
+/* PEOPLE */
