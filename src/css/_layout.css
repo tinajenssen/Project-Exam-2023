@@ -1,4 +1,16 @@
-.page-container {
+.container__page {
   height: 81vh;
   background-color: var(--light-grey);
 }
+
+.spinner {
+  color: var(--primary-color);
+  margin: auto;
+}
+
+/*
+.spinner {
+
+  margin: auto !important;
+}
+*/

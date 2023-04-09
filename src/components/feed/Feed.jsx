@@ -1,3 +1,5 @@
+/* 
+
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -6,7 +8,7 @@ import Breadcrumb from "react-bootstrap/breadcrumb";
 
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
-// import ProfileTabs from "./Tabs";
+
 import GetPosts from "../../js/api/posts/Read";
 
 export default function Feed() {
@@ -28,6 +30,8 @@ export default function Feed() {
     </>
   );
 }
+
+*/
 
 /*
  <Container fluid className="page-container">

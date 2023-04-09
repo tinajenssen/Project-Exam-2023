@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 //import { Link } from "react-router-dom";
-//import { Row } from "react-bootstrap";
-//import { Col } from "react-bootstrap";
+
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -56,7 +55,7 @@ function GetPosts() {
     <>
       <Container className="all-posts px-4">
         {posts.map((post) => (
-          <Link to={`post/${post.id}`} className="post-link">
+          <Link to={`${post.id}`} className="post-link">
             <div
               className="d-flex posts"
               id={post.id}
@@ -65,7 +64,6 @@ function GetPosts() {
             >
               <div>
                 <h2>{post.title}</h2>
-
                 <p className="date">Posted on {post.created}</p>
                 <p>{post.body}</p>
               </div>

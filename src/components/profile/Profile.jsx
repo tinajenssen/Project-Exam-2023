@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import Navigation from "../layout/Navigation";
-import User from "./User";
+import User from "../userprofile/User";
 
 import Footer from "../layout/Footer";
 
@@ -13,13 +13,13 @@ export default function Profile() {
   return (
     <>
       <Navigation />
-      <Container fluid className="page-container">
+      <Container fluid className="container__page">
         <Row className="px-5 py-5 justify-content-between">
           <Col md="12" className="banner card mb-2">
             Banner
           </Col>
           <Col md="3" className="px-0">
-            <div className="user-profile card pt-3">
+            <div className="users__profile card pt-3">
               <User />
             </div>
           </Col>

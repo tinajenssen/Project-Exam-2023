@@ -85,7 +85,7 @@ button.btn.btn-primary:hover {
   color: #fff;
 }
 
-.follow-btn {
+.btn--follow {
   border: 1px solid var(--primary-color);
   font-size: 12px;
   border-radius: 5px;
@@ -94,7 +94,16 @@ button.btn.btn-primary:hover {
   text-align: center;
 }
 
-.follow-btn:hover {
+.btn--follow:hover {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+.btn--logout {
+  border: 1px solid var(--primary-color);
+  font-size: 12px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
 }

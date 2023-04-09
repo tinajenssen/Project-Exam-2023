@@ -1,8 +1,8 @@
 .navbar {
   width: 100%;
   height: 12vh;
-  box-shadow: 1px 4px 6px var(--border-color);
-  background-color: var(--light-blue);
+
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-brand img {
@@ -31,12 +31,37 @@
 
 /*breadcrumb */
 .breadcrumb {
+  margin: auto;
+}
+.breadcrumb-item a {
   text-transform: uppercase;
   letter-spacing: 1.2px;
   font-size: 12px;
   margin: auto;
+  color: var(--grey) !important;
+  text-decoration: none;
+}
+.breadcrumb-item a:hover {
   color: var(--primary-color) !important;
 }
+
 .breadcrumb-item.active {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  margin: auto;
+  color: var(--dark) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*
+
+
+li .breadcrumb-item.active {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 12px;
   color: var(--primary-color) !important;
 }
+*/

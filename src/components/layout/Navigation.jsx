@@ -7,21 +7,33 @@ import Navbar from "react-bootstrap/Navbar";
 // import Profile from "../../img/profile_.png";
 import Logo from "../../img/primary_logo.png";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router-dom";
+import { useContext } from "react";
+
+import AuthContext from "../../js/api/auth/authContext";
 
 function Navigation() {
+  const [auth, setAuth] = useContext(AuthContext);
+
+  const history = useNavigate;
+
+  function logout() {
+    setAuth(null);
+    history.push("/");
+  }
+
   return (
     <Navbar collapseOnSelect expand="md">
       <Container fluid className="nav-container ps-0 pe-0 mx-5">
         <Navbar.Collapse className="nav-profile w-100 order-1 order-md-0">
           <Nav className="nav-link me-auto">
             <NavLink
-              to="/feed"
+              to="/posts"
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              Feed
+              Posts
             </NavLink>
             <NavLink
               to="/people"
@@ -49,7 +61,17 @@ function Navigation() {
             </NavLink>
 
             <Nav.Link href="" className="logout-btn">
-              Logout
+              {auth ? (
+                <>
+                  <button onClick={logout} className="nav-btn">
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link to="/" className="login">
+                  Logout
+                </Link>
+              )}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -60,6 +82,23 @@ function Navigation() {
 
 export default Navigation;
 
+/*
+
+ <Nav.Link href="" className="logout-btn">
+              {auth ? (
+                <>
+                  <button onClick={logout} className="nav-btn">
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link to="/" className="login">
+                  Logout
+                </Link>
+              )}
+            </Nav.Link>
+
+*/
 /*
 
   <Nav.Link href="/profile">

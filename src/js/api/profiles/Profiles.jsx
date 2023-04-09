@@ -68,17 +68,17 @@ function GetProfiles() {
             >
               <img
                 src={profile.avatar}
-                alt="The users profile picture"
-                className="me-3 rounded-circle profile-avatar col-md-2"
+                alt="Users avatar"
+                className="me-3 rounded-circle profile__avatar col-md-2"
                 style={{ width: "50px", height: "50px" }}
               />
 
-              <h2 className="profile-name ps-2 col-md-8">
+              <h2 className="profile__name ps-2 col-md-8">
                 <Link className="link-to-profile" to="/">
                   {profile.name}
                 </Link>
               </h2>
-              <div className="follow-btn col-md-2">Follow</div>
+              <div className="btn--follow col-md-2">Follow</div>
             </div>
           ))}
         </Col>

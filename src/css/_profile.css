@@ -1,8 +1,9 @@
-.profiles-container {
+.container__profiles {
   display: flex;
   flex-direction: row;
   height: 60vh;
   margin: auto;
+  max-width: 600px;
 }
 
 .all-profiles {
@@ -21,12 +22,12 @@
   border-radius: 5px;
 }
 
-.profile-name {
+.profile__name {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.profile-name a {
+.profile__name a {
   color: var(--color-dark);
   text-decoration: none;
 }
@@ -41,8 +42,15 @@
 }
 */
 
-.profile-avatar {
+.profile__avatar {
   margin-left: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile__avatar img {
+  max-width: 100%;
+  height: auto;
 }
 /*
 .banner {

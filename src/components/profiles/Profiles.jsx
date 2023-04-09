@@ -13,14 +13,14 @@ export default function People() {
   return (
     <>
       <Navigation />
-      <Container fluid className="page-container">
+      <Container fluid className="container__page">
         <Breadcrumb className="breadcrumb pt-4 pb-2">
           <Breadcrumb.Item active>People</Breadcrumb.Item>
         </Breadcrumb>
         <h1 className="text-center pb-2">Find people</h1>
 
         <Row>
-          <Col sm={10} md={8} lg={7} className="profiles-container">
+          <Col sm={10} md={9} className="container__profiles">
             <GetProfiles />
           </Col>
         </Row>
