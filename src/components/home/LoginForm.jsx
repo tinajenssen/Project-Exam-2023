@@ -43,7 +43,7 @@ function LoginForm() {
   useEffect(() => {
     if (isLoggedIn) {
       // hvis brukeren har blitt logget inn, naviger til feed
-      navigate("/profile");
+      navigate("/posts");
       setIsLoggedIn(false);
     }
   }, [isLoggedIn, navigate]);
@@ -86,9 +86,7 @@ function LoginForm() {
           </Form.Group>
 
           <Form.Group className="form-input mt-4">
-            <Button className="primary-btn" type="submit">
-              Login
-            </Button>
+            <Button type="submit">Login</Button>
             <Form.Text className="undertext">Not registred?</Form.Text>
             <Form.Text className="undertext">
               <Nav.Link href="/register" className="text-link">

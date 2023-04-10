@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
-//import { Link } from "react-router-dom";
 
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
-// import Profile from "../../../img/profile_.png";
-// import PostItem from "./PostItem.jsx";
 
 import Loading from "../../../components/common/Loading.jsx";
 
@@ -16,10 +13,7 @@ const url = API_SOCIAL_URL + action;
 
 function GetPosts() {
   const [posts, setPosts] = useState([]);
-
-  // loading
   const [isLoading, setIsLoading] = useState(false);
-  // error
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
@@ -54,22 +48,29 @@ function GetPosts() {
   return (
     <>
       <Container className="all-posts px-4">
-        {posts.map((post) => (
-          <Link to={`${post.id}`} className="post-link">
-            <div
-              className="d-flex posts"
-              id={post.id}
-              data-target={post.id}
-              key={post.id}
-            >
-              <div>
-                <h2>{post.title}</h2>
-                <p className="date">Posted on {post.created}</p>
-                <p>{post.body}</p>
+        {posts.map((post) => {
+          if (post.title && post.body) {
+            return (
+              <div
+                className="d-flex posts"
+                id={post.id}
+                data-target={post.id}
+                key={post.id}
+              >
+                <Link to={`${post.id}`} className="post-link">
+                  <div>
+                    <h2>{post.title}</h2>
+                    <p className="date">
+                      Posted on {new Date(post.created).toLocaleDateString()}
+                    </p>
+                    <p>{post.body}</p>
+                  </div>
+                </Link>
               </div>
-            </div>
-          </Link>
-        ))}
+            );
+          }
+          return null;
+        })}
       </Container>
     </>
   );

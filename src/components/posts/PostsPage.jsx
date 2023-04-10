@@ -7,7 +7,7 @@ import Breadcrumb from "react-bootstrap/breadcrumb";
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
 
-import GetPosts from "../../js/api/posts/Read";
+import GetPosts from "../../js/api/posts/GetPosts";
 
 export default function Posts() {
   return (

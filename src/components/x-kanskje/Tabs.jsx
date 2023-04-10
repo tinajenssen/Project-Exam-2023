@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import GetPosts from "../../js/api/posts/Read";
-import GetProfiles from "../../js/api/profiles/Profiles";
+import GetProfiles from "../../js/api/profiles/GetProfiles";
 import Media from "./MediaObject";
 
 function ProfileTabs() {

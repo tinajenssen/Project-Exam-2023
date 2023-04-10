@@ -11,7 +11,7 @@ function SearchForm() {
         className="me-2"
         aria-label="Search"
       />
-      <Button className="search-btn">Search</Button>
+      <Button className="btn--search">Search</Button>
     </Form>
   );
 }

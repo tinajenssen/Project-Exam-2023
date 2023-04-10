@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import illustration from "../../img/illustration_.png";
+import illustration from "../../img/illustration.png";
 import LoginForm from "./LoginForm";
 
 function Login() {
@@ -10,10 +10,10 @@ function Login() {
     <>
       <Container className="vh-100 px-0 form-container" fluid={true}>
         <Row>
-          <Col md="8" className="col-left">
+          <Col md="8" className="col__left">
             <img src={illustration} alt="" />
           </Col>
-          <Col md="4" className="col-right">
+          <Col md="4" className="col__right">
             <LoginForm />
           </Col>
         </Row>

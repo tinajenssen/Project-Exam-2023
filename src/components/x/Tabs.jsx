@@ -8,7 +8,7 @@ import Tab from "react-bootstrap/Tab";
 //import ListOfPosts from "../post/ListOfPosts";
 // import getPosts from "../../js/api/posts/Read";
 //import ListOfPosts from "../../js/api/posts/GetPosts";
-import GetPosts from "../../js/api/posts/Read.jsx";
+import GetPosts from "../../js/api/posts/GetPosts.jsx";
 
 function ProfileTabs() {
   return (

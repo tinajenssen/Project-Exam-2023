@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Image } from "react-bootstrap";
+import DefaultImg from "../../../img/profile_.png";
 
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
+//import { userImg } from "../../img/profile_.png";
 
 import Loading from "../../../components/common/Loading.jsx";
 
@@ -66,15 +69,16 @@ function GetProfiles() {
               data-target={profile.id}
               key={profile.id}
             >
-              <img
-                src={profile.avatar}
-                alt="Users avatar"
-                className="me-3 rounded-circle profile__avatar col-md-2"
-                style={{ width: "50px", height: "50px" }}
-              />
+              <div className="me-3 profile__avatar col-md-2">
+                {profile.avatar === "" || profile.avatar === null ? (
+                  <Image src={DefaultImg} alt="Users avatar" />
+                ) : (
+                  <Image src={profile.avatar} alt="Users avatar" />
+                )}
+              </div>
 
               <h2 className="profile__name ps-2 col-md-8">
-                <Link className="link-to-profile" to="/">
+                <Link to={`${profile.name}`} className="profile__link">
                   {profile.name}
                 </Link>
               </h2>
@@ -88,6 +92,8 @@ function GetProfiles() {
 }
 
 export default GetProfiles;
+
+/* style={{ backgroundImage: `url(${Placeholder})` }}
 /*
 {posts.map((post) => (
   <div

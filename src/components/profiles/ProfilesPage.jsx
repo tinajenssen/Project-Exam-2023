@@ -6,10 +6,9 @@ import Breadcrumb from "react-bootstrap/breadcrumb";
 
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
-// import ProfileTabs from "./Tabs";
-import GetProfiles from "../../js/api/profiles/Profiles";
+import GetProfiles from "../../js/api/profiles/GetProfiles";
 
-export default function People() {
+export default function Profiles() {
   return (
     <>
       <Navigation />

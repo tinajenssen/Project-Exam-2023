@@ -36,31 +36,31 @@ function Navigation() {
               Posts
             </NavLink>
             <NavLink
-              to="/people"
+              to="/profiles"
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              People
+              Profiles
             </NavLink>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Brand href="/" className=" mx-md-auto order-0">
+        <Navbar.Brand href="/posts" className=" mx-md-auto order-0">
           <img src={Logo} className="logo" alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="w-100 order-3">
           <Nav className="nav-links ms-auto">
             <NavLink
-              to="/user"
+              to="/userprofile"
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              User
+              Userprofile
             </NavLink>
 
-            <Nav.Link href="" className="logout-btn">
+            <Nav.Link href="" className="btn--logout">
               {auth ? (
                 <>
                   <button onClick={logout} className="nav-btn">
