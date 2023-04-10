@@ -1,0 +1,14 @@
+.profile {
+  border: 1px solid var(--border-color);
+}
+
+.avatar {
+  width: 60%;
+  height: 60%;
+  margin-left: 20%;
+  border-radius: 50%;
+}
+
+.published__posts {
+  border: 1px solid var(--border-color);
+}

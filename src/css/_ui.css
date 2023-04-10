@@ -1,8 +1,24 @@
 /* BUTTONS */
-.primary-btn {
+button.btn.btn-primary {
+  background-color: var(--secondary-color) !important;
+  border: 1px solid var(--secondary-color);
+  color: var(--dark);
+  font-size: 14px;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  width: 100% !important;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px !important;
+}
+button.btn.btn-primary:hover {
+  filter: brightness(110%);
+}
+
+.btn--primary {
   background-color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color);
-  color: black;
+  border: 1px solid var(--dark-color);
+  color: var(--dark);
   font-size: 14px;
   border-radius: 1rem;
   margin: auto;
@@ -12,11 +28,13 @@
   text-align: center;
   margin-top: 50px;
 }
-.primary-btn:hover {
-  background-color: var(--primary-color-hover) !important;
+
+.btn--primary:hover {
+  filter: brightness(110%);
+  color: var(--dark);
 }
 
-.primary-btn-outline {
+.btn--primary-outline {
   border: 1px solid var(--primary-color);
   color: black;
   font-size: 14px;
@@ -28,8 +46,9 @@
   text-align: center;
 }
 
-.primary-btn-outline:hover {
-  background-color: var(--primary-color-hover) !important;
+.btn--primary-outline:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--dark);
 }
 
 /*
@@ -73,18 +92,6 @@ button.btn.btn-primary:hover {
   text-align: center;
 }
 
-.search-btn {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-  background-color: #fff;
-  font-size: 12px;
-}
-
-.search-btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
 .btn--follow {
   border: 1px solid var(--primary-color);
   font-size: 12px;
@@ -101,9 +108,17 @@ button.btn.btn-primary:hover {
 
 .btn--logout {
   border: 1px solid var(--primary-color);
-  font-size: 12px;
   border-radius: 5px;
   margin: auto;
-  padding: 5px;
+  padding: 3px !important;
   text-align: center;
+  margin-left: 10px;
+}
+button.btn.btn-primary.btn--search {
+  border: 1px solid var(--primary-color);
+  background-color: var(--white) !important;
+  color: var(--primary-color);
+  width: 100px !important;
+  border-radius: 0.375rem;
+  margin: 0 !important;
 }

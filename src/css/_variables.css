@@ -1,19 +1,43 @@
 /* Colors */
 
 :root {
-  --primary-color: #2c43d8;
-  --bs-btn-border-color: #2c43d8;
+  --primary-color: #2383c1;
+  --primary-color-light-bg: #f0f7f9;
+
+  --primary-color-light: #b5d8e4;
+  --primary-color-dark: #0c123e;
+  --nav-link-color: #212529;
+  --links: #2c43d8;
+  --secondary-color: #f7a643;
+
+  --error: #b30000;
+  --border-color: #e2e2e2;
+
+  --white: #fff;
+  --dark: #212529;
+  --grey: #555353;
+  --light: #f8f8f8;
+  --light-grey: #f8f8f8;
+}
+
+/* Contrast checker
+
+primary - blå : ok med hvit
+primary - blå : fail med svart
+primary - dark : ok med hvit
+primary - dark : fail med svart
+primary - light : fail med hvit
+primary - dark : ok med svart
+*/
+
+/*
+  --primary-color-hover: #ed6f07;
+    --bs-btn-border-color: #2c43d8;
   --light-blue: #f9fafe;
   --primary-color-light: #ebf3fa;
   --primary-color-darker: #ed6f07;
   --secondary-color: #5a6ce1;
   --secondary-color-lighter: #ebf3fa;
-  --nav-link-color: #212529;
-  --border-color: #e2e2e2;
-  --primary-color-hover: #ed6f07;
-  --dark: #212529;
-  --grey: #555353;
-  --light: #f8f8f8;
-  --light-grey: #f8f8f8;
-  --error: #b30000;
-}
+
+
+  */

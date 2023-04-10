@@ -43,15 +43,25 @@
 */
 
 .profile__avatar {
-  margin-left: 0 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
 }
+
 .profile__avatar img {
-  max-width: 100%;
-  height: auto;
+  background-image: image();
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
 /*
 .banner {
   background-color: aliceblue;
@@ -128,3 +138,28 @@ img.profile-avatar {
 }
 */
 /* PEOPLE */
+
+/* Single profile */
+.container__profilepage {
+  min-height: 81vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile__content {
+  text-align: center;
+  min-height: 72vh;
+  margin: auto;
+}
+
+.banner {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
