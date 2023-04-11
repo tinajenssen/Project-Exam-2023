@@ -9,7 +9,8 @@ import { fetchToken } from "../fetchToken.jsx";
 import Loading from "../../../components/common/Loading.jsx";
 
 const action = "/posts";
-const url = API_SOCIAL_URL + action;
+const author = "?_author=true";
+const url = API_SOCIAL_URL + action + author;
 
 function GetPosts() {
   const [posts, setPosts] = useState([]);

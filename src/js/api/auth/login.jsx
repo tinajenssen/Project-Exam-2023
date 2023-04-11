@@ -2,7 +2,7 @@ import { API_SOCIAL_URL } from "../constants.jsx";
 import * as storage from "../../storage/index.jsx";
 
 const action = "/auth/login";
-const method = "post";
+const method = "POST";
 
 export async function login(profile, onSuccess) {
   const loginURL = API_SOCIAL_URL + action;
