@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Image } from "react-bootstrap";
@@ -8,21 +10,16 @@ import DefaultImg from "../../../img/profile_.png";
 
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
-//import { userImg } from "../../img/profile_.png";
 
 import Loading from "../../../components/common/Loading.jsx";
-
-import SearchForm from "../../../components/profiles/Search.jsx";
 
 const action = "/profiles";
 const url = API_SOCIAL_URL + action;
 
 function GetProfiles() {
   const [profiles, setProfiles] = useState([]);
-
-  // loading
+  const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  // error
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
@@ -31,11 +28,14 @@ function GetProfiles() {
         setIsError(false);
         setIsLoading(true);
 
-        const response = await fetchToken(url);
+        const settings = {
+          method: "GET",
+        };
+        const response = await fetchToken(url, settings);
         const json = await response.json();
         setProfiles(json);
         console.log(json);
-        // clear loading when data is successfylly loaded
+
         setIsLoading(false);
       } catch (error) {
         setIsLoading(false);
@@ -45,46 +45,65 @@ function GetProfiles() {
     getData();
   }, []);
 
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  let filteredProfiles = profiles.filter((profile) => {
+    return (
+      profile.name.toLowerCase().startsWith(search.toLowerCase()) &&
+      profile.name.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+
   if (isLoading) {
     return <Loading />;
   }
 
   if (isError) {
-    return <div>Error loading posts</div>;
+    return <div>Error loading profiles</div>;
   }
-  //const [imgSrc, setImgSrc] = useState("Invalid Image Source");
-  //<img src={imgSrc} onError = {() => setImgSrc("https://picsum.photos/200")} />
 
   return (
     <Container className="all-profiles">
       <Row>
-        <Col md={12}>
-          <SearchForm />
+        <Col md={12} className="search">
+          <input
+            type="text"
+            placeholder="Search Profiles"
+            className="search__input"
+            value={search}
+            onChange={handleChange}
+          />
         </Col>
         <Col>
-          {profiles.map((profile) => (
-            <div
-              className="d-flex profiles"
-              id={profile.id}
-              data-target={profile.id}
-              key={profile.id}
-            >
-              <div className="me-3 profile__avatar col-md-2">
-                {profile.avatar === "" || profile.avatar === null ? (
-                  <Image src={DefaultImg} alt="Users avatar" />
-                ) : (
-                  <Image src={profile.avatar} alt="Users avatar" />
-                )}
-              </div>
+          {filteredProfiles.length > 0 ? (
+            filteredProfiles.map((profile) => (
+              <div
+                className="d-flex profiles"
+                id={profile.id}
+                data-target={profile.id}
+                key={profile.id}
+              >
+                <div className="me-3 profile__avatar col-md-2">
+                  {profile.avatar === "" || profile.avatar === null ? (
+                    <Image src={DefaultImg} alt="Users avatar" />
+                  ) : (
+                    <Image src={profile.avatar} alt="Users avatar" />
+                  )}
+                </div>
 
-              <h2 className="profile__name ps-2 col-md-8">
-                <Link to={`${profile.name}`} className="profile__link">
-                  {profile.name}
-                </Link>
-              </h2>
-              <div className="btn--follow col-md-2">Follow</div>
-            </div>
-          ))}
+                <h2 className="profile__name ps-2 col-md-8">
+                  <Link to={`${profile.name}`} className="profile__link">
+                    {profile.name}
+                  </Link>
+                </h2>
+                <div className="btn--follow col-md-2">Follow</div>
+              </div>
+            ))
+          ) : (
+            <p>No matches found for "{search}".</p>
+          )}
         </Col>
       </Row>
     </Container>
@@ -92,52 +111,3 @@ function GetProfiles() {
 }
 
 export default GetProfiles;
-
-/* style={{ backgroundImage: `url(${Placeholder})` }}
-/*
-{posts.map((post) => (
-  <div
-    className="d-flex posts"
-    id={post.id}
-    data-target={post.id}
-    key={post.id}
-  >
-    <img
-      src={Profile}
-      alt="Users Avatar"
-      className="me-3 rounded-circle"
-      style={{ width: "60px", height: "60px" }}
-    />
-    <Link to={`post/${post.id}`}>
-      <div>
-        <h2>{post.title}</h2>
-        <p className="date">Posted on {post.created}</p>
-        <p>{post.body}</p>
-      </div>
-    </Link>
-  </div>
-))}
-*/
-/* 
- <div>
-        {profiles.map(profile => (      
-            <div className="profiles" id={profile.id} data-target={profile.id} key={profile.id}>
-                <div className="row">
-                        <div className="col-8 profileName">
-                        <Link to={`/feed/profiles/${profile.name}`}>{profile.name}</Link>
-                            <p>{error}</p>
-                        </div>
-                        <div className="col-4 profileBtn">
-                            <FollowUnfollowButton followers={profile.followers} profileName={profile.name} />
-                        </div>  
-              
-                </div>
-            </div>
-        ))}
-    </div>
-
-    */
-
-/*
-                  <Link to={`/feed/profiles/${profile.name}`}>{profile.name}</Link>
-    */
