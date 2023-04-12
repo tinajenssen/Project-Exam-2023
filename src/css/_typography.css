@@ -26,6 +26,12 @@ h4 {
   font-size: 14px;
 }
 
+h5 {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
 p {
   font-size: 14px;
   font-weight: 400;
@@ -38,4 +44,5 @@ p {
   color: var(--grey);
   font-size: 10px;
   margin-bottom: 5px;
+  text-transform: uppercase;
 }

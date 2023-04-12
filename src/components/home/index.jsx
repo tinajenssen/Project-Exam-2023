@@ -14,7 +14,7 @@ function Home() {
             <Col className="px-5 welcome">
               <img src={logo} alt="" className="logo--light-blue" />
               <h1>Welcome to Noroff Network</h1>
-              <h3>An inspiring network for Noroff students </h3>
+              <p>An inspiring network for Noroff students </p>
             </Col>
           </Col>
           <Col md="4" className="col__links">

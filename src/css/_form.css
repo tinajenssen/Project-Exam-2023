@@ -47,6 +47,10 @@
   color: var(--grey) !important;
 }
 
+.col__right p {
+  font-size: 16px;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .col-left img {
     width: 55%;
