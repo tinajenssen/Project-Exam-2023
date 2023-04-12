@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { post } from "../fetchToken.jsx";
+import { post } from "../../fetchToken.jsx";
 
 function AddComment({ postId }) {
   const [comment, setComment] = useState("");

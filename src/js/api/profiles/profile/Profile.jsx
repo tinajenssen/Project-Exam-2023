@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-bootstrap";
-import DefaultImg from "../../../img/profile_.png";
+import DefaultImg from "../../../../img/profile_.png";
 
 const Profile = ({ profile }) => {
   return (

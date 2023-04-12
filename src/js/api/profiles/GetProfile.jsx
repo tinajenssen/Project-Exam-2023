@@ -7,10 +7,10 @@ import Col from "react-bootstrap/Col";
 import { API_SOCIAL_PROFILES } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
 import Loading from "../../../components/common/Loading.jsx";
-import Profile from "./Profile.jsx";
-import Banner from "./Banner.jsx";
-import Followers from "./Followers.jsx";
-import Following from "./Following.jsx";
+import Profile from "./profile/Profile.jsx";
+import Banner from "./profile/Banner.jsx";
+import Followers from "./profile/Followers.jsx";
+import Following from "./profile/Following.jsx";
 
 function GetProfile() {
   const [profile, setProfile] = useState([]);

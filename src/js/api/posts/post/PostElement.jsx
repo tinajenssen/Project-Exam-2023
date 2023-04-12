@@ -1,7 +1,7 @@
 // PostElement.jsx
 import React from "react";
 import { Image } from "react-bootstrap";
-import DefaultImg from "../../../img/profile_.png";
+import DefaultImg from "../../../../img/profile_.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

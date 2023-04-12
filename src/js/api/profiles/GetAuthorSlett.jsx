@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { Link } from "react-router-dom";
 //import { Image } from "react-bootstrap";
 //import DefaultImg from "../../../img/profile_.png";
@@ -19,3 +19,4 @@ function GetAuthor(props) {
 }
 
 export default GetAuthor;
+*/

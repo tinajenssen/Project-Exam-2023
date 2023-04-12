@@ -4,11 +4,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
 import { API_SOCIAL_URL } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
-import { Link } from "react-router-dom";
 import Loading from "../../../components/common/Loading.jsx";
-import PostElement from "./PostElement.jsx";
-import Reactions from "./Reactions.jsx";
-import Comments from "./Comments.jsx";
+import PostElement from "./post/PostElement.jsx";
+import Reactions from "./post/Reactions.jsx";
+import Comments from "./post/Comments.jsx";
 
 const action = "/posts/";
 const baseUrl = API_SOCIAL_URL + action;
