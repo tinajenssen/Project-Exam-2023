@@ -9,23 +9,60 @@
 }
 
 .navbar a {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--nav-link-color) !important;
   text-decoration: none;
   padding: 10px;
 }
 .navbar a.active {
   color: var(--links) !important;
+  font-weight: 600;
 }
 
 .navbar a:hover {
   color: var(--links) !important;
 }
 
-/* Denne må redigeres */
 .navbar-toggler {
-  background-color: darkgoldenrod;
-  width: 50px;
+  display: flex;
+  border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-collapse {
+  background-color: var(--white);
+}
+.logout__container {
+  display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-container.ps-0.pe-0.mx-5.container-fluid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .nav-profile {
+    margin-top: 6px;
+  }
+  .logout__container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .btn--logout {
+    width: 80px;
+  }
+  .nav-link {
+    padding-bottom: 0;
+  }
+  .navbar-expand-md {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /*breadcrumb */

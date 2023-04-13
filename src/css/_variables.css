@@ -1,14 +1,16 @@
 /* Colors */
 
 :root {
-  --primary-color: #2383c1;
+  --primary-color: #0063b1;
   --primary-color-light-bg: #f0f7f9;
 
   --primary-color-light: #b5d8e4;
   --primary-color-dark: #0c123e;
   --nav-link-color: #212529;
-  --links: #2c43d8;
-  --secondary-color: #f7a643;
+
+  --links: #0063b1;
+  --secondary-color: #f87800;
+  --secondary-color-dark: #f87800;
 
   --error: #b30000;
   --border-color: #e2e2e2;
@@ -20,6 +22,10 @@
   --light-grey: #f8f8f8;
 }
 
+/*
+  --secondary-color: #f7a643;
+
+  */
 /* Contrast checker
 
 primary - blå : ok med hvit

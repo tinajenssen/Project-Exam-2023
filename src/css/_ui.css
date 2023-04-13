@@ -16,7 +16,7 @@ button.btn.btn-primary:hover {
 }
 
 .btn--primary {
-  background-color: var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
   border: 1px solid var(--dark-color);
   color: var(--dark);
   font-size: 14px;
@@ -35,7 +35,7 @@ button.btn.btn-primary:hover {
 }
 
 .btn--primary-outline {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
   color: black;
   font-size: 14px;
   border-radius: 1rem;
@@ -47,60 +47,26 @@ button.btn.btn-primary:hover {
 }
 
 .btn--primary-outline:hover {
-  background-color: var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
   color: var(--dark);
-}
-
-/*
-button.btn.btn-primary {
-  background-color: var(--primary-color) !important;
-  border: var(--primary-color);
-  color: black;
-  font-size: 14px;
-  border-radius: 1rem;
-  margin: auto;
-  margin-bottom: 10px;
-}
-
-button.btn.btn-primary:hover {
-  background-color: var(--primary-color-hover) !important;
-}
-
-*/
-/* outline blue btn */
-/*
-.secondary-btn {
-  border: 0.5px solid var(--border-color) !important;
-  border-radius: 3px !important;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.2px;
-}
-.secondary-btn.active {
-  background-color: var(--secondary-color-lighter) !important;
-  font-weight: 800;
-}
-.secondary-btn:hover {
-  background-color: var(--secondary-color-lighter) !important;
-  font-weight: 800;
-}
-*/
-.logout-btn {
-  border: 1px solid var(--secondary-color-lighter) !important;
-  border-radius: 2rem;
-  width: 90px;
-  padding: 5px 20px;
-  text-align: center;
 }
 
 .btn--logout {
   border: 1px solid var(--primary-color);
-  border-radius: 5px;
+  border-radius: 25px;
   margin: auto;
-  padding: 3px !important;
+  padding: 3px 5px !important;
   text-align: center;
   margin-left: 10px;
 }
+.btn--logout:hover {
+  background-color: var(--primary-color);
+}
+
+.btn--logout a:hover {
+  color: var(--white) !important;
+}
+
 button.btn.btn-primary.btn--search {
   border: 1px solid var(--primary-color);
   background-color: var(--white) !important;
@@ -110,20 +76,6 @@ button.btn.btn-primary.btn--search {
   margin: 0 !important;
 }
 
-/*
-button.btn.btn-secondary.btn--follow {
-  border: 1px solid var(--primary-color);
-  font-size: 12px;
-  border-radius: 5px;
-  margin: auto;
-  padding: 5px;
-  text-align: center;
-  background-color: none;
-}
-button.btn.btn-secondary:hover {
-  filter: brightness(110%);
-}
-*/
 .btn-secondary {
   background-color: var(--primary-color) !important;
   border: 1px solid var(--primary-color) !important;
@@ -138,7 +90,6 @@ button.btn.btn-secondary:hover {
 
 .btn-secondary:hover {
   background-color: var(--primary-color) !important;
-
   color: #fff;
 }
 
@@ -146,4 +97,49 @@ button.btn.btn-secondary:hover {
   border: 1px solid var(--primary-color) !important;
   background-color: var(--white) !important;
   color: var(--primary-color) !important;
+}
+
+.logout-btn {
+  border: 1px solid var(--secondary-color-lighter) !important;
+  border-radius: 2rem;
+  width: 90px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+/* buttons home page */
+/*
+.btn--primary-dark {
+  background-color: var(--secondary-color-dark) !important;
+  border: 1px solid var(--secondary-color-dark);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  width: 200px;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px !important;
+}
+.btn--primary-dark:hover {
+  filter: brightness(90%);
+  color: var(--white);
+}
+*/
+.btn--primary-dark-outline {
+  border: 1px solid var(--secondary-color-dark);
+  color: var(--primary-color-dark);
+  font-size: 14px;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  width: 200px;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px !important;
+}
+.btn--primary-dark-outline:hover {
+  background-color: var(--secondary-color-dark) !important;
+  color: var(--white);
 }
