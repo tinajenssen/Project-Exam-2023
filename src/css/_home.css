@@ -1,39 +1,12 @@
-/*
-.background--gradient {
-  background-color: #0a1035;
-  display: flex;
-}
-*/
-/*
-.box {
-  background-color: #fff;
-  width: 350px;
-  height: 400px;
-  border-radius: 25px;
-  box-shadow: 1px 3px 6px var(--grey);
-  margin: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-*/
-
-/*
-.logo--secondary {
-  width: 100px;
-  margin: auto;
-  display: block;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-*/
 .col__intro {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color-light-bg);
   height: 100vh;
   padding: 0 !important;
 }
+
 .welcome {
-  width: 70%;
-  margin: 10%;
+  margin: 5%;
+  max-width: 600px;
 }
 .logo--light-blue {
   width: 130px;
@@ -43,11 +16,12 @@
 
 .col__intro h1 {
   font-size: 35px;
-  color: #acd9e6;
+  color: var(--secondary-color-dark);
 }
 .col__intro p {
   font-size: 20px;
-  color: #eee;
+  color: var(--grey);
+  font-weight: 100;
 }
 
 .col__links {
@@ -62,23 +36,75 @@
   margin-bottom: auto;
 }
 
-/* Register and login */
-.col__left {
-  height: 100vh;
-  padding: 0 !important;
-
-  background-color: var(--primary-color-light-bg);
+/** større enn md **/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .welcome {
+    width: 80%;
+  }
+  img.illustration {
+    width: 62%;
+    left: 2%;
+  }
 }
 
-.col__left img {
-  width: 50%;
-  margin-left: 8%;
-  position: fixed;
-  bottom: 0;
-}
+@media only screen and (max-width: 767px) {
+  .home {
+    height: 100vh;
+  }
+  .col__intro {
+    height: 100%;
+  }
+  .welcome {
+    width: 100%;
+    margin: 0 !important;
+    padding-bottom: 10%;
+  }
+  .logo--light-blue {
+    width: 130px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
-.col__right {
-  height: 100vh;
-  padding: 0 !important;
-  display: flex;
+  .col__intro h1 {
+    font-size: 30px;
+  }
+
+  .col__intro p {
+    font-size: 18px;
+  }
+
+  .col__links {
+    display: flex;
+    height: 30%;
+  }
+
+  .links {
+    margin-top: 10%;
+  }
+
+  .col__left {
+    height: 100%;
+  }
+  .col__right {
+    height: 100%;
+    margin: 10% 0;
+  }
+  img.logo__form {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+
+  img.illustration {
+    width: 80%;
+    position: relative;
+    display: block;
+    margin-left: 5%;
+  }
+
+  .register__form h1,
+  .register__form p,
+  .login__form h1 {
+    text-align: center;
+  }
 }

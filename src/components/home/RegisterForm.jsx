@@ -74,7 +74,7 @@ function RegisterForm() {
 
   return (
     <>
-      <div className="register-form">
+      <div className="register__form">
         <h1>Create an account</h1>
         <p>Join our inspiring network!</p>
         <Form

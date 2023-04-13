@@ -1,5 +1,33 @@
-.register-form,
-.login-form {
+.col__left {
+  height: 100vh;
+  padding: 0 !important;
+  background-color: var(--primary-color-light-bg);
+}
+img.logo__form {
+  width: 130px;
+  position: fixed;
+  top: 4%;
+  left: 2%;
+}
+img.illustration {
+  width: 55%;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+}
+
+.col__right {
+  height: 100vh;
+  padding: 0 !important;
+  display: flex;
+}
+
+.col__right p {
+  font-size: 16px;
+}
+
+.register__form,
+.login__form {
   width: 70%;
   margin: auto;
   margin-top: auto;
@@ -7,6 +35,9 @@
   max-width: 400px;
 }
 
+.form-input {
+  margin: auto;
+}
 .form-label {
   margin-bottom: 0;
   font-size: 10px;
@@ -14,6 +45,7 @@
 }
 .form-control {
   font-size: 12px;
+  border-color: var(--border-color);
 }
 .form-text {
   font-size: 12px;
@@ -24,18 +56,12 @@
   display: inline;
 }
 
-.form-input {
-  margin: auto;
-}
-.form-control {
-  border-color: var(--border-color);
-}
-
 .undertext {
   display: inline-flex;
   font-size: 14px;
   color: var(--grey);
 }
+
 .text-link {
   font-size: 14px;
   margin-left: 5px;
@@ -47,21 +73,6 @@
   color: var(--grey) !important;
 }
 
-.col__right p {
-  font-size: 16px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .col-left img {
-    width: 55%;
-  }
-
-  .register-form,
-  .login-form {
-    width: 80%;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .col-left {
     height: 100%;
@@ -70,9 +81,12 @@
     width: 70%;
     position: relative;
   }
+  .col__right {
+    height: 100%;
+  }
 
-  .register-form,
-  .login-form {
+  .register__form,
+  .login__form {
     width: 80%;
   }
 

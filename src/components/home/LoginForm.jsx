@@ -56,10 +56,10 @@ function LoginForm() {
 
   return (
     <>
-      <div className="login-form">
+      <div className="login__form">
         <h1>Login</h1>
         <Form onSubmit={handleSubmit(onSubmit)} id="loginForm">
-          <Form.Group className="mb-2">
+          <Form.Group className="form-input mb-2">
             <Form.Label>Email</Form.Label>
             <Form.Control
               {...register("email")}
@@ -72,7 +72,7 @@ function LoginForm() {
             </Form.Text>
           </Form.Group>
 
-          <Form.Group className="mb-2">
+          <Form.Group className="form-input mb-2">
             <Form.Label>Password</Form.Label>
             <Form.Control
               {...register("password")}
