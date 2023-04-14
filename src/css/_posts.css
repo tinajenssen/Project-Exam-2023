@@ -1,4 +1,17 @@
-/* POSTS */
+/* POSTS - list of all posts*/
+
+.container__posts {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  margin: auto;
+  max-width: 600px;
+}
+.all-posts {
+  flex: 1;
+  overflow-y: scroll;
+}
+
 .posts {
   margin-bottom: 10px;
   padding: 15px 25px;
@@ -9,30 +22,23 @@
   box-shadow: 1px 4px 6px var(--border-color);
 }
 
-.container__posts {
-  display: flex;
-  flex-direction: row;
-  height: 60vh;
-  margin: auto;
-  max-width: 600px;
-}
-
-.all-posts {
-  flex: 1;
-  overflow-y: scroll;
-}
-
 .post-link {
   text-decoration: none;
 }
 
-/* Single post */
+/* Spesific post */
+/*
+.post{
+
+}
+*/
 
 .post__element {
   text-align: center;
   min-height: 72vh;
   width: 80%;
   margin: auto;
+  padding-bottom: 10px !important;
 }
 
 .post__img {
@@ -44,6 +50,70 @@
   width: 100%;
 }
 
+.author {
+  max-width: 600px;
+}
+.author__avatar {
+  flex: 0;
+  padding: 0 !important;
+}
+.author__avatar .avatar {
+  width: 40px;
+  height: 40px;
+  padding: 0 !important;
+}
+
+.postedBy {
+  text-align: left;
+  width: 100%;
+}
+.author__name {
+  text-decoration: none;
+  color: var(--dark);
+  margin: 0 !important;
+  font-weight: 600;
+}
+
+.posted__date {
+  color: var(--grey);
+  font-size: 12px;
+}
+
+.post__content {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  padding: 0;
+}
+
+/* REACTIONS */
+.reactions {
+  width: 80%;
+  margin: auto;
+  max-width: 600px;
+  padding: 0;
+}
+.reaction {
+  padding: 0;
+  display: inline-flex;
+}
+
+.x {
+  display: flex;
+  padding: 0;
+
+  margin-right: 20px;
+}
+
+.reaction__symbol {
+  margin-right: 5px;
+}
+.reaction__count {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: auto;
+  color: var(--grey);
+}
 /* Comments */
 
 .comments {
@@ -89,39 +159,3 @@
   transform: translate(-50%, -50%);
 }
 */
-
-.author {
-  max-width: 600px;
-}
-.author__avatar {
-  flex: 0;
-  padding: 0 !important;
-}
-.author__avatar .avatar {
-  width: 40px;
-  height: 40px;
-  padding: 0 !important;
-}
-
-.postedBy {
-  text-align: left;
-  width: 100%;
-}
-.author__name {
-  text-decoration: none;
-  color: var(--dark);
-  margin: 0 !important;
-  font-weight: 600;
-}
-
-.posted__date {
-  color: var(--grey);
-  font-size: 12px;
-}
-
-.post__content {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-  padding: 0;
-}

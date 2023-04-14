@@ -5,5 +5,6 @@ export const API_SOCIAL_URL = API_HOST_URL + API_BASE + API_SOCIAL_BASE;
 
 export const API_SOCIAL_PROFILES = API_SOCIAL_URL + "/profiles/";
 
-export const baseUrl = "https://nf-api.onrender.com/api/vi/social";
+export const baseUrl = "https://nf-api.onrender.com/api/v1/social";
 export const API_Profiles = baseUrl + "/profiles";
+export const postUrl = baseUrl + "/posts/";

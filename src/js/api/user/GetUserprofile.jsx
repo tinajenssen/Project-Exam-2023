@@ -53,7 +53,7 @@ function GetUserprofile() {
 
   return (
     <>
-      <Container>
+      <Container className="container__userprofile">
         <Breadcrumb className="breadcrumb pt-4 pb-2">
           <Breadcrumb.Item active>{profile.name}</Breadcrumb.Item>
         </Breadcrumb>

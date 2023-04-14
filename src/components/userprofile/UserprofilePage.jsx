@@ -1,19 +1,23 @@
 import React from "react";
-//import Container from "react-bootstrap/Container";
+import Container from "react-bootstrap/Container";
 //import Col from "react-bootstrap/Col";
 //import Row from "react-bootstrap/Row";
+import { NavLink } from "react-router-dom";
 
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
 //import CreateNewPost from "../../js/api/posts/Create";
-import GetUserprofile from "../../js/api/user/GetUserprofile";
+//import GetUserprofile from "../../js/api/user/GetUserprofile";
+//<GetUserprofile />
 
 export default function UserProfile() {
   return (
     <>
       <Navigation />
-
-      <GetUserprofile />
+      <Container className="height__min">
+        <NavLink to="/userprofile/post">Create a new post</NavLink>
+        <NavLink to="/userprofile/post/edit">Edit you posts</NavLink>
+      </Container>
 
       <Footer />
     </>

@@ -49,7 +49,7 @@ function GetPosts() {
     <>
       <Container className="all-posts px-4">
         {posts.map((post) => {
-          if (post.title && post.body) {
+          if (post.title) {
             return (
               <div
                 className="d-flex posts"
@@ -79,3 +79,4 @@ function GetPosts() {
 export default GetPosts;
 
 // if (post.title && post.body && post.media) {
+//  if (post.title && post.body) {

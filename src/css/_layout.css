@@ -7,3 +7,15 @@
   color: var(--secondary-color);
   margin: auto;
 }
+
+.container__post {
+  min-height: 81vh;
+  display: flex;
+}
+.container__spinner {
+  height: 81vh;
+}
+
+.height__min {
+  min-height: 81vh;
+}

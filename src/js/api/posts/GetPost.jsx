@@ -8,6 +8,7 @@ import Loading from "../../../components/common/Loading.jsx";
 import PostElement from "./post/PostElement.jsx";
 import Reactions from "./post/Reactions.jsx";
 import Comments from "./post/Comments.jsx";
+//import ReactToPost from "./post/ReactToPost.jsx";
 
 const action = "/posts/";
 const baseUrl = API_SOCIAL_URL + action;
@@ -75,6 +76,11 @@ function GetThisPost() {
 }
 
 export default GetThisPost;
+
+/*         <ReactToPost post={post} /> */
+/*
+<AddComment postId={String(post.id)} />
+*/
 /*
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";

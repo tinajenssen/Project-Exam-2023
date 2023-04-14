@@ -141,5 +141,4 @@ button.btn.btn-primary.btn--search {
 }
 .btn--primary-dark-outline:hover {
   background-color: var(--secondary-color-dark) !important;
-  color: var(--white);
 }

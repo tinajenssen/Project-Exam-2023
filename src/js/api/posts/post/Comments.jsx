@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function Comments({ post }) {
   return (
-    <Container className="comments mt-5">
+    <Container className="comments mt-2">
       <h5>Comments</h5>
       <Container className="justify-content comment py-2">
         {post.comments &&

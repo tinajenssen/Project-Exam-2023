@@ -14,6 +14,7 @@ function Navigation() {
   const [auth, setAuth] = useContext(AuthContext);
 
   const history = useNavigate;
+  const username = JSON.parse(localStorage.getItem("username"));
 
   function logout() {
     setAuth(null);
@@ -81,3 +82,15 @@ function Navigation() {
 }
 
 export default Navigation;
+
+/*
+ <NavLink
+              to="/userprofile"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              username
+            </NavLink>
+
+            */
