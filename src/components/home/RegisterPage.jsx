@@ -12,7 +12,7 @@ function Register() {
       <Container className="vh-100 px-0" fluid={true}>
         <Row>
           <Col md="8" className="col__left ">
-            <img src={logo} className="logo__form" />
+            <img src={logo} className="logo__form" alt="Noroff Netowrk logo" />
             <img
               src={illustration}
               alt="illustration of people on social media"

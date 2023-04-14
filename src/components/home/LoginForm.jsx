@@ -22,7 +22,6 @@ const schema = yup.object().shape({
 function LoginForm() {
   const {
     register,
-    handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -31,10 +30,13 @@ function LoginForm() {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  function onSuccess(userName) {
+    localStorage.setItem("user.name", userName);
+    setIsLoggedIn(true);
+  }
+
   useEffect(() => {
-    setLoginFormListener(() => {
-      setIsLoggedIn(true);
-    });
+    setLoginFormListener(onSuccess);
   }, []);
 
   useEffect(() => {
@@ -44,17 +46,13 @@ function LoginForm() {
     }
   }, [isLoggedIn, navigate]);
 
-  function onSubmit(data) {
-    console.log(data);
-  }
-
   console.log(errors);
 
   return (
     <>
       <div className="login__form">
         <h1>Login</h1>
-        <Form onSubmit={handleSubmit(onSubmit)} id="loginForm">
+        <Form id="loginForm">
           <Form.Group className="form-input mb-2">
             <Form.Label>Email</Form.Label>
             <Form.Control

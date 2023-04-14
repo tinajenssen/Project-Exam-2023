@@ -26,13 +26,11 @@ export async function login(profile, onSuccess) {
     storage.save("token", accessToken);
     storage.save("profile", user);
 
-    // ny kode:
-    storage.save("name", user.name);
-
-    onSuccess();
+    return user;
   } else {
     alert("Login failed. Please try again");
     console.error(result);
+    return null;
   }
 }
 
