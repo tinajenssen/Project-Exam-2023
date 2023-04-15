@@ -16,12 +16,7 @@ export default function Profiles() {
           <Breadcrumb.Item active>Profiles</Breadcrumb.Item>
         </Breadcrumb>
         <h1 className="text-center pb-2">Find other profiles</h1>
-
-        <Row>
-          <Col sm={10} md={9} className="container__profiles">
-            <GetProfiles />
-          </Col>
-        </Row>
+        <GetProfiles />
       </Container>
       <Footer />
     </>
