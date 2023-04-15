@@ -5,22 +5,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../img/primary_logo.png";
 
-import { NavLink, useNavigate, Link } from "react-router-dom";
-import { useContext } from "react";
-
-import AuthContext from "../../js/api/auth/authContext";
+import { NavLink } from "react-router-dom";
 
 function Navigation() {
-  const [auth, setAuth] = useContext(AuthContext);
-  const history = useNavigate;
-
-  function logout() {
-    setAuth(null);
-    localStorage.clear();
-    localStorage.removeItem("token");
+  const logout = () => {
     localStorage.removeItem("profile");
-    history.push("/");
-  }
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  };
 
   return (
     <Navbar collapseOnSelect expand="md">
@@ -61,17 +53,9 @@ function Navigation() {
             </NavLink>
 
             <div className="logout__container">
-              <Nav.Link href="" className="btn--logout">
-                {auth ? (
-                  <>
-                    <button onClick={logout} className="nav-btn">
-                      Logout
-                    </button>
-                  </>
-                ) : (
-                  <Link to="/">Logout</Link>
-                )}
-              </Nav.Link>
+              <button onClick={logout} className="btn--logout">
+                Logout
+              </button>
             </div>
           </Nav>
         </Navbar.Collapse>
@@ -83,6 +67,19 @@ function Navigation() {
 export default Navigation;
 
 /*
+       <Nav.Link href="" className="btn--logout">
+                {auth ? (
+                  <>
+                    <button onClick={logout} className="nav-btn">
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <Link to="/">Logout</Link>
+                )}
+              </Nav.Link>
+
+
  <NavLink
               to="/userprofile"
               className={({ isActive, isPending }) =>

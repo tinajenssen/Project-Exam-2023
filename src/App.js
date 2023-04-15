@@ -11,6 +11,7 @@ import Profile from "./components/profiles/ProfilePage";
 import User from "./components/userprofile/UserprofilePage";
 import NewPost from "./components/userprofile/CreateNewPost";
 import EditThisPost from "./components/userprofile/EditPostPage";
+import DeleteThisPost from "./components/userprofile/DeletePostPage";
 
 function App() {
   return (
@@ -26,9 +27,14 @@ function App() {
           <Route path="profiles/:name" element={<Profile />}></Route>
           <Route path="/userprofile" element={<User />}></Route>
           <Route path="/userprofile/post" element={<NewPost />}></Route>
+          <Route path="posts/:name" element={<Profile />}></Route>
           <Route
             path="/userprofile/post/edit"
             element={<EditThisPost />}
+          ></Route>
+          <Route
+            path="/userprofile/post/delete"
+            element={<DeleteThisPost />}
           ></Route>
         </Routes>
       </Router>
