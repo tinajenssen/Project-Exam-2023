@@ -12,9 +12,7 @@ import AuthContext from "../../js/api/auth/authContext";
 
 function Navigation() {
   const [auth, setAuth] = useContext(AuthContext);
-
   const history = useNavigate;
-  const username = JSON.parse(localStorage.getItem("username"));
 
   function logout() {
     setAuth(null);
@@ -61,6 +59,7 @@ function Navigation() {
             >
               Userprofile
             </NavLink>
+
             <div className="logout__container">
               <Nav.Link href="" className="btn--logout">
                 {auth ? (

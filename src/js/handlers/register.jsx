@@ -14,5 +14,3 @@ export function setRegisterFormListener(onSuccess) {
     register(profile, onSuccess);
   });
 }
-
-//
