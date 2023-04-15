@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { fetchToken } from "../fetchToken.jsx";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function CreateNewPost() {
   const [title, setTitle] = useState("");
@@ -34,21 +36,37 @@ function CreateNewPost() {
   }
 
   return (
-    <div>
-      <form onSubmit={onFormSubmit}>
-        <input
-          value={title}
-          placeholder="write your title"
-          onChange={onTitleChange}
-        />
-        <input
-          value={body}
-          placeholder="write your text"
-          onChange={onBodyChange}
-        />
-        <input value={media} placeholder="add url" onChange={onMediaChange} />
-        <button>Submit</button>
-      </form>
+    <div className="create__post">
+      <Form onSubmit={onFormSubmit}>
+        <Form.Group className="form-input mb-2">
+          <Form.Label>Title</Form.Label>
+          <Form.Control
+            value={title}
+            placeholder="Add title to the post"
+            onChange={onTitleChange}
+          ></Form.Control>
+        </Form.Group>
+        <Form.Group className="form-input mb-2">
+          <Form.Label>Body</Form.Label>
+          <Form.Control
+            value={body}
+            placeholder="write your text"
+            onChange={onBodyChange}
+          ></Form.Control>
+        </Form.Group>
+        <Form.Group className="form-input mb-2">
+          <Form.Label>Media</Form.Label>
+          <Form.Control
+            value={media}
+            placeholder="add url"
+            onChange={onMediaChange}
+          ></Form.Control>
+        </Form.Group>
+
+        <Form.Group className="form-input mt-4">
+          <Button type="submit">Submit</Button>
+        </Form.Group>
+      </Form>
     </div>
   );
 }

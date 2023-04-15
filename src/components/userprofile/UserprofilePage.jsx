@@ -1,22 +1,29 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-//import Col from "react-bootstrap/Col";
-//import Row from "react-bootstrap/Row";
+import { Container, Breadcrumb } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
-//import CreateNewPost from "../../js/api/posts/Create";
-//import GetUserprofile from "../../js/api/user/GetUserprofile";
-//<GetUserprofile />
 
 export default function UserProfile() {
   return (
     <>
       <Navigation />
-      <Container className="height__min">
-        <NavLink to="/userprofile/post">Create a new post</NavLink>
-        <NavLink to="/userprofile/post/edit">Edit you posts</NavLink>
+      <Container fluid className="height__min">
+        <Breadcrumb className="breadcrumb pt-4 pb-2">
+          <Breadcrumb.Item active>userprofile</Breadcrumb.Item>
+        </Breadcrumb>
+
+        <Container className="link__group justify-content-between">
+          <NavLink className="link__post py-1" to="/userprofile/post">
+            Create new post
+          </NavLink>
+          <NavLink className="link__post py-1" to="/userprofile/post/edit">
+            Edit post
+          </NavLink>
+          <NavLink className="link__post py-1" to="/userprofile/post/delete">
+            Delete post
+          </NavLink>
+        </Container>
       </Container>
 
       <Footer />
@@ -24,7 +31,21 @@ export default function UserProfile() {
   );
 }
 
+/*    <div className="link__group">
+          <NavLink className="link__post" to="/userprofile/post">
+            Create new post
+          </NavLink>
+          <NavLink className="link__post" to="/userprofile/post">
+            Edit post
+          </NavLink>
+          <NavLink className="link__post" to="/userprofile/post">
+            Delete post
+          </NavLink>
+        </div> */
+
 /*
+
+
      <Container fluid className="container__profilepage pb-5">
         <Row>
           <Col sm="12" className="banner">
