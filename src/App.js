@@ -7,12 +7,7 @@ import Posts from "./components/posts/PostsPage";
 import GetThisPost from "./components/posts/PostPage";
 import Profiles from "./components/profiles/ProfilesPage";
 import Profile from "./components/profiles/ProfilePage";
-
 import User from "./components/userprofile/UserprofilePage";
-import NewPost from "./components/userprofile/CreateNewPost";
-import EditThisPost from "./components/userprofile/EditPostPage";
-import DeleteThisPost from "./components/userprofile/DeletePostPage";
-import UpdateMedia from "./components/userprofile/UpdateMediaPage";
 
 function App() {
   return (
@@ -27,17 +22,7 @@ function App() {
           <Route path="/profiles" element={<Profiles />}></Route>
           <Route path="profiles/:name" element={<Profile />}></Route>
           <Route path="/userprofile" element={<User />}></Route>
-          <Route path="/userprofile/post" element={<NewPost />}></Route>
           <Route path="posts/:name" element={<Profile />}></Route>
-          <Route
-            path="/userprofile/post/edit"
-            element={<EditThisPost />}
-          ></Route>
-          <Route
-            path="/userprofile/post/delete"
-            element={<DeleteThisPost />}
-          ></Route>
-          <Route path="/userprofile/update" element={<UpdateMedia />}></Route>
         </Routes>
       </Router>
     </>
