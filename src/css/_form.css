@@ -73,6 +73,13 @@ img.illustration {
   color: var(--grey) !important;
 }
 
+/* Create post form */
+.create__post,
+.edit__post {
+  max-width: 300px;
+  margin: auto;
+}
+
 @media only screen and (max-width: 767px) {
   .col-left {
     height: 100%;

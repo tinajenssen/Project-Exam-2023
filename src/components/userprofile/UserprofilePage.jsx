@@ -31,6 +31,17 @@ export default function UserProfile() {
   );
 }
 
+/*
+<Container className="link__group justify-content-between">
+          <NavLink className="link__post py-1" to="/userprofile/update">
+            Update you user avatar
+          </NavLink>
+          <NavLink className="link__post py-1" to="/userprofile/post/delete">
+            Update your banner img
+          </NavLink>
+        </Container>
+
+        */
 /*    <div className="link__group">
           <NavLink className="link__post" to="/userprofile/post">
             Create new post

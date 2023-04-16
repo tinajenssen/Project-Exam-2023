@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import { API_SOCIAL_PROFILES } from "../constants.jsx";
 import { fetchToken } from "../fetchToken.jsx";
 import Loading from "../../../components/common/Loading.jsx";
-import Profile from "./profile/Profile.jsx";
 import Banner from "./profile/Banner.jsx";
-import Followers from "./profile/Followers.jsx";
-import Following from "./profile/Following.jsx";
+import Profile from "./profile/Profile.jsx";
+import { Link } from "react-router-dom";
 
 function GetProfile() {
   const [profile, setProfile] = useState([]);
@@ -27,7 +24,9 @@ function GetProfile() {
 
   const baseUrl = API_SOCIAL_PROFILES + name;
   const posts = "?_posts=true";
-  const url = baseUrl + posts;
+  const following = "&following=true";
+  const followers = "&followers=true";
+  const url = baseUrl + posts + following + followers;
 
   useEffect(() => {
     async function fetchData() {
@@ -67,15 +66,23 @@ function GetProfile() {
 
         <Row className="justify-content-between">
           <Banner profile={profile} />
-          <Col md="3" className="pt-3">
+          <Col md="4" lg="3" className="pt-3">
             <Profile profile={profile} />
           </Col>
-          <Col md="6" className="pt-3">
-            posts
-          </Col>
-          <Col md="3" className="pt-3">
-            <Followers profile={profile} />
-            <Following profile={profile} />
+          <Col md="8" lg="9" className="pt-3 profile__posts">
+            {profile.posts &&
+              profile.posts.map((post) => (
+                <Link to={`/posts/${post.id}`} className="linktopost">
+                  <div className="profile__post">
+                    <img className="profile__media" src={post.media} alt="" />
+                    <h2>{post.title}</h2>
+                    <p className="posted__date">
+                      {new Date(post.created).toLocaleDateString()}
+                    </p>
+                    <p>{post.body}</p>
+                  </div>
+                </Link>
+              ))}
           </Col>
         </Row>
       </Container>

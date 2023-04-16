@@ -11,6 +11,11 @@ function CreateNewPost() {
   function onFormSubmit(event) {
     event.preventDefault();
 
+    if (title === "" || body === "" || media === "") {
+      alert("Please fill in all fields before submitting the form");
+      return;
+    }
+
     const postBody = {
       title,
       body,
@@ -20,6 +25,15 @@ function CreateNewPost() {
     fetchToken("https://nf-api.onrender.com/api/v1/social/posts/", {
       method: "POST",
       body: JSON.stringify(postBody),
+    }).then((response) => {
+      if (response.status === 200) {
+        alert("Post was successfully created!");
+        setTitle("");
+        setBody("");
+        setMedia("");
+      } else {
+        alert("something went wrong. please try agian!");
+      }
     });
   }
 

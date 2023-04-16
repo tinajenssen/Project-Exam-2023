@@ -1,13 +1,10 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Breadcrumb from "react-bootstrap/breadcrumb";
+import { Container, Col } from "react-bootstrap";
 
 import Navigation from "../layout/Navigation";
-import Footer from "../layout/Footer";
-
+import Breadcrumb from "react-bootstrap/breadcrumb";
 import GetPosts from "../../js/api/posts/GetPosts";
+import Footer from "../layout/Footer";
 
 export default function Posts() {
   return (
@@ -18,11 +15,9 @@ export default function Posts() {
           <Breadcrumb.Item active>Posts</Breadcrumb.Item>
         </Breadcrumb>
         <h1 className="text-center pb-2">Recent posts</h1>
-        <Row>
-          <Col sm={10} md={9} className="container__posts">
-            <GetPosts />
-          </Col>
-        </Row>
+        <Col fluid className="container__posts mb-4">
+          <GetPosts />
+        </Col>
       </Container>
       <Footer />
     </>

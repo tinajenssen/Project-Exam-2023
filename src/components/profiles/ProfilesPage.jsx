@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 import Navigation from "../layout/Navigation";
 import Breadcrumb from "react-bootstrap/breadcrumb";
 import GetProfiles from "../../js/api/profiles/GetProfiles";

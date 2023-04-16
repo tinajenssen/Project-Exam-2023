@@ -1,4 +1,6 @@
 // Create followUnfollow.js
+
+/*
 const FollowUnfollow = async (id) => {
   const settings = {
     method: "POST",
@@ -17,3 +19,4 @@ const FollowUnfollow = async (id) => {
 };
 
 export default FollowUnfollow;
+*/

@@ -11,6 +11,7 @@ export default function DeleteThisPost() {
       <Navigation />
       <Container className="height__min">
         <Breadcrumb className="breadcrumb pt-4 pb-2">
+          <Breadcrumb.Item href="/userprofile">userprofile</Breadcrumb.Item>
           <Breadcrumb.Item active>Delete</Breadcrumb.Item>
         </Breadcrumb>
         <h1 className="text-center">Delete post </h1>

@@ -10,7 +10,7 @@ function Reactions({ post }) {
         {post.reactions &&
           post.reactions.map((reaction, index) => (
             <div key={index}>
-              <Container className="x">
+              <Container className="reaction__group">
                 <div className="reaction__symbol">{reaction.symbol}</div>
                 <div className="reaction__count">{reaction.count}</div>
               </Container>

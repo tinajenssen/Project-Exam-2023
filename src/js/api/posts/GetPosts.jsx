@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { API_SOCIAL_URL } from "../constants.jsx";
@@ -47,36 +47,50 @@ function GetPosts() {
 
   return (
     <>
-      <Container className="all-posts px-4">
-        {posts.map((post) => {
-          if (post.title) {
-            return (
-              <div
-                className="d-flex posts"
-                id={post.id}
-                data-target={post.id}
-                key={post.id}
-              >
-                <Link to={`${post.id}`} className="post-link">
-                  <div>
-                    <h2>{post.title}</h2>
-                    <p className="date">
-                      Posted: {new Date(post.created).toLocaleDateString()}
-                    </p>
-                    <p>{post.body}</p>
-                  </div>
-                </Link>
-              </div>
-            );
-          }
-          return null;
-        })}
+      <Container fluid>
+        <Row>
+          {posts.map((post) => {
+            if (post.title && post.body && post.media) {
+              return (
+                <Col xs={12} sm={6} md={4}>
+                  <Link to={`${post.id}`} className="post__link d-flex">
+                    <div
+                      className="post__card"
+                      id={post.id}
+                      data-target={post.id}
+                      key={post.id}
+                    >
+                      <img
+                        className="post__media my-2"
+                        src={post.media}
+                        alt=""
+                      />
+                      <h2 className="mb-0">{post.title}</h2>
+                      <div className="post__details">
+                        <Link
+                          to={`/profiles/${post.author && post.author.name}`}
+                          className="post__author"
+                        >
+                          {post.author.name}
+                        </Link>
+
+                        <p className="post__date">
+                          | {new Date(post.created).toLocaleDateString()}
+                        </p>
+                      </div>
+
+                      <p className="mt-2">{post.body}</p>
+                    </div>
+                  </Link>
+                </Col>
+              );
+            }
+            return null;
+          })}
+        </Row>
       </Container>
     </>
   );
 }
 
 export default GetPosts;
-
-// if (post.title && post.body && post.media) {
-//  if (post.title && post.body) {

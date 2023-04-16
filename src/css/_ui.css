@@ -51,19 +51,19 @@ button.btn.btn-primary:hover {
   color: var(--dark);
 }
 
-.btn--logout {
+button.btn--logout {
   border: 1px solid var(--primary-color);
   border-radius: 25px;
   margin: auto;
-  padding: 3px 5px !important;
+  padding: 3px 20px !important;
   text-align: center;
   margin-left: 10px;
+  background-color: var(--white);
+  font-size: 14px;
+  color: var(--dark);
 }
 .btn--logout:hover {
   background-color: var(--primary-color);
-}
-
-.btn--logout a:hover {
   color: var(--white) !important;
 }
 
@@ -77,11 +77,11 @@ button.btn.btn-primary.btn--search {
 }
 
 .btn-secondary {
-  background-color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
+  border: 1px solid var(--secondary-color) !important;
+  color: var(--dark);
   font-size: 12px;
   border-radius: 5px;
-  margin: auto;
 
   text-align: center;
   width: 80px;
@@ -89,22 +89,14 @@ button.btn.btn-primary.btn--search {
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-color) !important;
-  color: #fff;
+  background-color: var(--secondary-color) !important;
+  color: var(--dark);
 }
 
 .btn-secondary.btn--unfollow {
-  border: 1px solid var(--primary-color) !important;
+  border: 1px solid var(--secondary-color) !important;
   background-color: var(--white) !important;
-  color: var(--primary-color) !important;
-}
-
-.logout-btn {
-  border: 1px solid var(--secondary-color-lighter) !important;
-  border-radius: 2rem;
-  width: 90px;
-  padding: 5px 20px;
-  text-align: center;
+  color: var(--dark) !important;
 }
 
 /* buttons home page */
@@ -141,4 +133,24 @@ button.btn.btn-primary.btn--search {
 }
 .btn--primary-dark-outline:hover {
   background-color: var(--secondary-color-dark) !important;
+}
+
+/* single profile page */
+/*follow/unfollow*/
+
+.btn-secondary.profile__btn--follow {
+  width: 100%;
+  font-size: 14px;
+}
+
+.btn-secondary.profile__btn--follow:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--dark);
+}
+
+.btn-secondary.profile__btn--unfollow {
+  border: 1px solid var(--secondary-color) !important;
+  background-color: var(--white) !important;
+  color: var(--dark) !important;
+  width: 100%;
 }

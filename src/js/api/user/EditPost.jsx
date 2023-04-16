@@ -22,6 +22,12 @@ function EditPost(props) {
     fetchToken(`https://nf-api.onrender.com/api/v1/social/posts/${id}`, {
       method: "PUT",
       body: JSON.stringify(postBody),
+    }).then((response) => {
+      if (response.status === 200) {
+        alert("The post is updated!");
+      } else {
+        alert("Something went wrong. Please try agian");
+      }
     });
   }
 
@@ -68,14 +74,7 @@ function EditPost(props) {
             onChange={onBodyChange}
           ></Form.Control>
         </Form.Group>
-        <Form.Group className="form-input mb-2">
-          <Form.Label>Body</Form.Label>
-          <Form.Control
-            value={body}
-            placeholder="write your text"
-            onChange={onBodyChange}
-          ></Form.Control>
-        </Form.Group>
+
         <Form.Group className="form-input mb-2">
           <Form.Label>Media</Form.Label>
           <Form.Control

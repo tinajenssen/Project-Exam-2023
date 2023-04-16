@@ -1,38 +1,21 @@
 /* POSTS - list of all posts*/
-
 .container__posts {
-  width: 80%;
-  max-width: 1000px;
+  width: 90%;
   margin: auto;
 }
-
 .post__card {
   float: left;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .post__media {
   width: 100%;
   height: 150px;
-}
-
-.post__media img {
   object-fit: cover;
-  object-position: center;
 }
-.posts {
-  margin-bottom: 10px;
-  padding: 15px 25px;
-  border-radius: 5px;
-  width: 100%;
-  border: 0.5px solid var(--border-color);
-}
-.posts:hover {
-  box-shadow: 1px 4px 6px var(--border-color);
-}
-
 .post__details {
   display: flex;
 }
-
 .post__author {
   font-size: 12px;
   text-decoration: none;
@@ -42,23 +25,12 @@
 .post__author:hover {
   color: var(--primary-color);
 }
-
 .post__date {
   font-size: 12px;
   color: var(--light-grey);
 }
 
-.post-link {
-  text-decoration: none;
-}
-
-/* Spesific post */
-/*
-.post{
-
-}
-*/
-
+/* SINGLE POST PAGE */
 .post__element {
   text-align: center;
   min-height: 72vh;
@@ -66,16 +38,10 @@
   margin: auto;
   padding-bottom: 10px !important;
 }
-
 .post__img {
   width: 100%;
   max-width: 600px;
 }
-
-.post__img img {
-  width: 100%;
-}
-
 .author {
   max-width: 600px;
 }
@@ -88,7 +54,6 @@
   height: 40px;
   padding: 0 !important;
 }
-
 .postedBy {
   text-align: left;
   width: 100%;
@@ -99,16 +64,13 @@
   margin: 0 !important;
   font-weight: 600;
 }
-
 .author__name:hover {
   color: var(--primary-color);
 }
-
 .posted__date {
   color: var(--grey);
   font-size: 12px;
 }
-
 .post__content {
   max-width: 600px;
   margin: auto;
@@ -127,14 +89,11 @@
   padding: 0;
   display: inline-flex;
 }
-
-.x {
+.reaction__group {
   display: flex;
   padding: 0;
-
   margin-right: 20px;
 }
-
 .reaction__symbol {
   margin-right: 5px;
 }
@@ -144,11 +103,12 @@
   margin-top: auto;
   color: var(--grey);
 }
-/* Comments */
 
+/* COMMENTS */
 .comments {
-  max-width: 600px;
+  width: 80%;
   margin: auto;
+  max-width: 600px;
   padding: 0;
 }
 .comment {
@@ -161,33 +121,3 @@
   text-align: left;
   margin-top: 10px;
 }
-
-/*
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-.avatar img {
-  margin: auto;
-}
-
-.profile__avatar {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.profile__avatar img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-*/

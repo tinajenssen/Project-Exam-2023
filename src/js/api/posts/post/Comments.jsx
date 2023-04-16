@@ -11,10 +11,10 @@ function Comments({ post }) {
   return (
     <Container className="comments mt-2">
       <h5>Comments</h5>
-      <Container className="justify-content comment py-2">
+      <Container className="justify-content py-2 px-0">
         {post.comments &&
           post.comments.map((comment, index) => (
-            <div key={index}>
+            <div key={index} className="comment">
               <Container className="d-flex comment__by">
                 <Row>
                   <Col className="author__avatar">

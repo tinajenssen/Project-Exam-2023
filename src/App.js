@@ -12,6 +12,7 @@ import User from "./components/userprofile/UserprofilePage";
 import NewPost from "./components/userprofile/CreateNewPost";
 import EditThisPost from "./components/userprofile/EditPostPage";
 import DeleteThisPost from "./components/userprofile/DeletePostPage";
+import UpdateMedia from "./components/userprofile/UpdateMediaPage";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             path="/userprofile/post/delete"
             element={<DeleteThisPost />}
           ></Route>
+          <Route path="/userprofile/update" element={<UpdateMedia />}></Route>
         </Routes>
       </Router>
     </>

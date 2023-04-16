@@ -1,20 +1,80 @@
-.profile {
-  border: 1px solid var(--border-color);
+/* Single profile */
+.container__profilepage {
+  min-height: 81vh;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
 }
-
+.banner {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+}
+.profile__details {
+  width: 200px;
+  padding: 0;
+  margin: 0;
+}
 .avatar {
-  width: 100px;
-  height: 100px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
   border-radius: 50%;
 }
 .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.follow__group {
+  width: 80%;
   margin: auto;
+  margin-bottom: 20px;
+}
+.follow__count {
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  padding: 0 10px;
+}
+.count__label {
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
+/*POSTS*/
+a.linktopost {
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.profile__post {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 0.5px solid var(--border-color);
+}
+.profile__media {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/*
+.profile__content {
+  text-align: center;
+  min-height: 72vh;
+  margin: auto;
+}*/
+/*
 .published__posts {
   border: 1px solid var(--border-color);
 }
-
+*/
 /*
 .profile__avatar {
   position: relative;

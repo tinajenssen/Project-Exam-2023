@@ -1,4 +1,3 @@
-// PostElement.jsx
 import React from "react";
 import { Image } from "react-bootstrap";
 import DefaultImg from "../../../../img/profile_.png";
@@ -30,7 +29,10 @@ function PostElement({ post }) {
             )}
           </Col>
           <Col className="postedBy">
-            <Link className="author__name mx-1">
+            <Link
+              to={`/profiles/${post.author && post.author.name}`}
+              className="author__name mx-1"
+            >
               {" "}
               {post.author && post.author.name}
             </Link>
