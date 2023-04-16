@@ -10,7 +10,6 @@ export function setRegisterFormListener(onSuccess) {
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
 
-    // Sender inn profile og onSuccess callback
     register(profile, onSuccess);
   });
 }

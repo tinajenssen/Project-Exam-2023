@@ -23,6 +23,7 @@ export async function register(profile, onSuccess) {
   const result = await response.json();
 
   if (response.ok) {
+    alert("You are now registered. Please log in!");
     onSuccess();
   } else {
     alert("Registration failed. Please try again");
