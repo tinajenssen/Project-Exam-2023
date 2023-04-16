@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/project-exam-2023/static/css/main.3083c3d9.css",
+    "main.js": "/project-exam-2023/static/js/main.5b0b1cfa.js",
+    "static/js/787.89519a4d.chunk.js": "/project-exam-2023/static/js/787.89519a4d.chunk.js",
+    "static/media/illustration.png": "/project-exam-2023/static/media/illustration.75e78e265501f71a9e64.png",
+    "static/media/profile_.png": "/project-exam-2023/static/media/profile_.f8a8c710fb6862170d67.png",
+    "static/media/primary_logo.png": "/project-exam-2023/static/media/primary_logo.d3a6f96d7154883cc5c4.png",
+    "static/media/logo_primary_orange.png": "/project-exam-2023/static/media/logo_primary_orange.d88ad5dbdc4bd50546e2.png",
+    "static/media/noroff-network_logo_dark.png": "/project-exam-2023/static/media/noroff-network_logo_dark.77d9108e5f6b1e05c289.png",
+    "index.html": "/project-exam-2023/index.html",
+    "main.3083c3d9.css.map": "/project-exam-2023/static/css/main.3083c3d9.css.map",
+    "main.5b0b1cfa.js.map": "/project-exam-2023/static/js/main.5b0b1cfa.js.map",
+    "787.89519a4d.chunk.js.map": "/project-exam-2023/static/js/787.89519a4d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3083c3d9.css",
+    "static/js/main.5b0b1cfa.js"
+  ]
+}
