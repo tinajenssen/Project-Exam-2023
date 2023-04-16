@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { fetchToken } from "../fetchToken.jsx";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Form, Button } from "react-bootstrap";
 
 function EditPost(props) {
   const [id, setId] = useState("");
@@ -50,6 +49,7 @@ function EditPost(props) {
   return (
     <div className="edit__post">
       <Form onSubmit={onFormSubmit}>
+        <h2 className="text-center mt-4 mb-2">Edit a post</h2>
         <Form.Group className="form-input mb-2">
           <Form.Label>ID</Form.Label>
           <Form.Control
@@ -83,7 +83,7 @@ function EditPost(props) {
             onChange={onMediaChange}
           ></Form.Control>
         </Form.Group>
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Update</Button>
       </Form>
     </div>
   );

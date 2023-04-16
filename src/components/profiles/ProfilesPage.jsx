@@ -1,10 +1,8 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-
+import { Container, Breadcrumb } from "react-bootstrap";
 import Navigation from "../layout/Navigation";
-import Breadcrumb from "react-bootstrap/breadcrumb";
-import GetProfiles from "../../js/api/profiles/GetProfiles";
 import Footer from "../layout/Footer";
+import GetProfiles from "../../js/api/profiles/GetProfiles";
 
 export default function Profiles() {
   return (

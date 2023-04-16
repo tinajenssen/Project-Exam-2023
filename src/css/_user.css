@@ -6,3 +6,25 @@
   min-height: 100%;
   display: flex;
 }
+
+ul.nav-tabs {
+  width: 350px;
+  margin: auto;
+}
+li.nav-item {
+  font-size: 12px;
+}
+button.nav-link.active {
+  font-weight: 600;
+}
+
+button.nav-link {
+  color: var(--dark);
+}
+button.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.tab-content {
+  padding-bottom: 50px;
+}

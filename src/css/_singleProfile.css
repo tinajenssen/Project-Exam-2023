@@ -63,35 +63,16 @@ a.linktopost {
 .profile__media {
   width: 100%;
   margin-bottom: 10px;
-}
-/*
-.profile__content {
-  text-align: center;
-  min-height: 72vh;
-  margin: auto;
-}*/
-/*
-.published__posts {
-  border: 1px solid var(--border-color);
-}
-*/
-/*
-.profile__avatar {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 50%;
+  height: 300px;
+  object-fit: cover;
 }
 
-.avatar img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@media only screen and (max-width: 767px) {
+  .banner {
+    height: 200px;
+  }
+  .profile__details {
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
-*/

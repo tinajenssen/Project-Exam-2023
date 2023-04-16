@@ -70,12 +70,13 @@ function GetProfile() {
             <Profile profile={profile} />
           </Col>
           <Col md="8" lg="9" className="pt-3 profile__posts">
+            <h2 className="mb-3"> My posts</h2>
             {profile.posts &&
               profile.posts.map((post) => (
                 <Link to={`/posts/${post.id}`} className="linktopost">
                   <div className="profile__post">
                     <img className="profile__media" src={post.media} alt="" />
-                    <h2>{post.title}</h2>
+                    <h3>{post.title}</h3>
                     <p className="posted__date">
                       {new Date(post.created).toLocaleDateString()}
                     </p>

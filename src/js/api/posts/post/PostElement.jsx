@@ -1,10 +1,7 @@
 import React from "react";
-import { Image } from "react-bootstrap";
-import DefaultImg from "../../../../img/profile_.png";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import DefaultImg from "../../../../img/profile_.png";
 
 function PostElement({ post }) {
   return (

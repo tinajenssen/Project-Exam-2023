@@ -1,7 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import illustration from "../../img/illustration.png";
 import logo from "../../img/noroff-network_logo_dark.png";
 import RegisterForm from "./RegisterForm";

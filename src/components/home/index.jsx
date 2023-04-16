@@ -1,9 +1,6 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import logo from "../../img/logo_primary_orange.png";
-import Nav from "react-bootstrap/Nav";
 
 function Home() {
   return (
@@ -40,22 +37,3 @@ function Home() {
 }
 
 export default Home;
-
-/*
-<Container fluid className="vh-100 background--gradient">
-<div className="box">
-  <img src={logo} alt="" className="logo--secondary" />
-  <h1 className=" text-center">Welcome to Noroff Network</h1>
-  <h3 className="text-center">
-    An inspiring network for Noroff students{" "}
-  </h3>
-  <Nav.Link className="btn--primary" href="/login">
-    Login
-  </Nav.Link>
-  <Nav.Link className="btn--primary-outline" href="/register">
-    Register
-  </Nav.Link>
-</div>
-</Container>
-
-*/

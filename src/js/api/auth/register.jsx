@@ -23,16 +23,9 @@ export async function register(profile, onSuccess) {
   const result = await response.json();
 
   if (response.ok) {
-    // hvis login var vellykket, lagre token i localstorage
-    // ok kall onSuccess callback
-    // basic UX
-    //alert("you are now registered");
-
     onSuccess();
   } else {
-    // hvis login feilet, gi beskjed til brukeren
-    // alert("Registration failed. Please try again");
-
+    alert("Registration failed. Please try again");
     console.error(result);
   }
 }

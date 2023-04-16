@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { fetchToken } from "../fetchToken.jsx";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Form, Button } from "react-bootstrap";
 
 function DeletePost(props) {
   const [id, setId] = useState("");
@@ -25,6 +24,7 @@ function DeletePost(props) {
 
   return (
     <div className="edit__post">
+      <h2 className="text-center mt-4 mb-2">Delete a post</h2>
       <Form onSubmit={onFormSubmit}>
         <Form.Group className="form-input mb-2">
           <Form.Label>ID</Form.Label>

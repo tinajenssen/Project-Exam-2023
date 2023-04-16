@@ -1,11 +1,7 @@
 import React from "react";
-
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Logo from "../../img/primary_logo.png";
-
 import { NavLink } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import Logo from "../../img/primary_logo.png";
 
 function Navigation() {
   const logout = () => {
@@ -65,28 +61,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
-/*
-       <Nav.Link href="" className="btn--logout">
-                {auth ? (
-                  <>
-                    <button onClick={logout} className="nav-btn">
-                      Logout
-                    </button>
-                  </>
-                ) : (
-                  <Link to="/">Logout</Link>
-                )}
-              </Nav.Link>
-
-
- <NavLink
-              to="/userprofile"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              username
-            </NavLink>
-
-            */

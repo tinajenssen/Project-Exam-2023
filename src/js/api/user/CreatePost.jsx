@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { fetchToken } from "../fetchToken.jsx";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Form, Button } from "react-bootstrap";
 
 function CreateNewPost() {
   const [title, setTitle] = useState("");
@@ -12,7 +11,7 @@ function CreateNewPost() {
     event.preventDefault();
 
     if (title === "" || body === "" || media === "") {
-      alert("Please fill in all fields before submitting the form");
+      alert("Please fill in all fields to successfully upload a new post");
       return;
     }
 
@@ -51,6 +50,7 @@ function CreateNewPost() {
 
   return (
     <div className="create__post">
+      <h2 className="text-center mt-4 mb-2">Create a new post</h2>
       <Form onSubmit={onFormSubmit}>
         <Form.Group className="form-input mb-2">
           <Form.Label>Title</Form.Label>
@@ -78,7 +78,7 @@ function CreateNewPost() {
         </Form.Group>
 
         <Form.Group className="form-input mt-4">
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Upload</Button>
         </Form.Group>
       </Form>
     </div>

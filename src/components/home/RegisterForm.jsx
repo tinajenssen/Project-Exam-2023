@@ -1,14 +1,9 @@
-import React, { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Nav from "react-bootstrap/Nav";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Form, Button, Nav } from "react-bootstrap";
 import { setRegisterFormListener } from "../../js/handlers/register";
 
 const schema = yup.object().shape({
@@ -43,24 +38,17 @@ function RegisterForm() {
     resolver: yupResolver(schema),
   });
 
-  // nye variabler for å håndtere navigering
   const navigate = useNavigate();
   const [isRegistered, setIsRegistered] = useState(false);
 
-  // useEffect brukes for å sette opp en lytter som lytter etter events
-
-  // Lytter etter at brukeren prøver å registrere seg
   useEffect(() => {
-    // sender inn en funksjon som skal kjøres når brukeren har blitt registrert
     setRegisterFormListener(() => {
       setIsRegistered(true);
     });
   }, []);
 
-  // Lytter etter at brukeren er registrert
   useEffect(() => {
     if (isRegistered) {
-      // hvis brukeren er registrert naviger til login
       navigate("/login");
       setIsRegistered(false);
     }

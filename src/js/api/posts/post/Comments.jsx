@@ -1,17 +1,14 @@
 // Comments.jsx
 import React from "react";
-import { Image } from "react-bootstrap";
-import DefaultImg from "../../../../img/profile_.png";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import DefaultImg from "../../../../img/profile_.png";
 
 function Comments({ post }) {
   return (
     <Container className="comments mt-2">
       <h5>Comments</h5>
-      <Container className="justify-content py-2 px-0">
+      <Container className="justify-content py-2 px-0 mx-0">
         {post.comments &&
           post.comments.map((comment, index) => (
             <div key={index} className="comment">

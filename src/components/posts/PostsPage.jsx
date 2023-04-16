@@ -1,10 +1,8 @@
 import React from "react";
-import { Container, Col } from "react-bootstrap";
-
+import { Container, Col, Breadcrumb } from "react-bootstrap";
 import Navigation from "../layout/Navigation";
-import Breadcrumb from "react-bootstrap/breadcrumb";
-import GetPosts from "../../js/api/posts/GetPosts";
 import Footer from "../layout/Footer";
+import GetPosts from "../../js/api/posts/GetPosts";
 
 export default function Posts() {
   return (

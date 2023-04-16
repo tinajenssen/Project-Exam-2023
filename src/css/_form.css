@@ -76,7 +76,7 @@ img.illustration {
 /* Create post form */
 .create__post,
 .edit__post {
-  max-width: 300px;
+  width: 350px;
   margin: auto;
 }
 
