@@ -16,7 +16,7 @@
 
 .col__intro h1 {
   font-size: 35px;
-  color: var(--secondary-color-dark);
+  color: var(--primary-color-dark);
 }
 .col__intro p {
   font-size: 20px;

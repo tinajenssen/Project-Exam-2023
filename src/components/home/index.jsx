@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import logo from "../../img/logo_primary_orange.png";
+import logo from "../../img/noroff-network_logo_dark.png";
 
 function Home() {
   return (
